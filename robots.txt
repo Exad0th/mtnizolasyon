@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://mtn-izolasyon.vercel.app/sitemap.xml

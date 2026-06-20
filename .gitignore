@@ -1,0 +1,15 @@
+# Vercel / Claude tooling (machine-local, not part of the site)
+.vercel
+.claude/
+
+# Dependencies
+node_modules/
+
+# Logs & OS junk
+*.log
+.DS_Store
+Thumbs.db
+
+# Environment
+.env
+.env.*
