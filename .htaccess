@@ -1,15 +1,16 @@
 # ============================================================
-#  DİKKAT: www.mtnizolasyon.com şu anda NGINX üzerinde çalışıyor.
-#  nginx bu dosyayı OKUMAZ. Bu sunucudaki karşılığı için:
-#      _kurulum/nginx-ayarlari.conf
-#  Bu dosya, ileride Apache/LiteSpeed tabanlı bir barındırmaya
-#  geçilirse diye korunuyor.
-# ============================================================
-
-# ============================================================
 #  MTN İzolasyon — Apache yapılandırması
-#  Sunucu Nginx ise bu dosya işe yaramaz; karşılıkları için
-#  _kurulum/ klasöründeki nota bakın.
+#
+#  Bu sunucuda GEÇERLİDİR. www.mtnizolasyon.com'da nginx ters vekil
+#  olarak önde duruyor (Server: nginx) ama istekleri Apache karşılıyor —
+#  404 sayfasının Apache'ye ait olması bunu kanıtlıyor. Dolayısıyla
+#  .htaccess okunur ve uygulanır.
+#
+#  NOT: Bazı nginx+Apache kurulumlarında statik dosyalar (görsel, css,
+#  font) doğrudan nginx tarafından servis edilir; o durumda aşağıdaki
+#  Header ve Cache-Control yönergeleri HTML'de çalışır ama statik
+#  dosyalarda çalışmayabilir. Yükledikten sonra _kurulum/yayin-kontrol.md
+#  içindeki testi çalıştırın.
 # ============================================================
 
 # ---------- Hata sayfası ----------
