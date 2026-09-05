@@ -40,17 +40,17 @@
 <link rel="manifest" href="/site.webmanifest">
 
 <!-- ============ Performans ============ -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preload" as="image" href="/images/carousel/slide-037.webp" type="image/webp" fetchpriority="high">
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="preload" href="/fonts/manrope-400-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/poppins-700-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/fonts/fonts.css">
 <script>
   /* Apply saved theme before paint to avoid a flash */
   (function(){try{var t=localStorage.getItem('mtn-theme');if(!t)t=(window.matchMedia&&matchMedia('(prefers-color-scheme: dark)').matches)?'dark':'light';if(t==='dark')document.documentElement.classList.add('dark');}catch(e){}})();
 </script>
 <style>
   *{box-sizing:border-box;margin:0;padding:0}
-  body{font-family:'Manrope',sans-serif;color:#15202b;background:#fff;-webkit-font-smoothing:antialiased}
+  body{font-family:'Manrope',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;color:#15202b;background:#fff;-webkit-font-smoothing:antialiased}
   ::selection{background:#c8102e;color:#fff}
   a{color:inherit}
 
@@ -240,6 +240,10 @@
     .r-svc-card,.kesit,figure{break-inside:avoid}
     img{max-width:100% !important;height:auto !important}
   }
+
+  /* ---------- Font yedek yığınları (self-host fontlar inmezse) ---------- */
+  [style*="font-family:'Poppins'"]{font-family:'Poppins',system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif !important}
+  [style*="font-family:'Manrope'"]{font-family:'Manrope',system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif !important}
 </style>
 <style id="mtn-theme">
   /* ---------- Theme toggle button ---------- */
@@ -321,7 +325,9 @@
    },
    "publisher": {
     "@id": "https://www.mtnizolasyon.com/#business"
-   }
+   },
+   "dateModified": "2026-09-05",
+   "datePublished": "2026-09-05"
   },
   {
    "@type": "ImageObject",
@@ -436,6 +442,38 @@
      "name": "Antalya"
     },
     {
+     "@type": "City",
+     "name": "Manavgat"
+    },
+    {
+     "@type": "City",
+     "name": "Side"
+    },
+    {
+     "@type": "City",
+     "name": "Gazipaşa"
+    },
+    {
+     "@type": "City",
+     "name": "Serik"
+    },
+    {
+     "@type": "City",
+     "name": "Kemer"
+    },
+    {
+     "@type": "City",
+     "name": "Konyaaltı"
+    },
+    {
+     "@type": "City",
+     "name": "Muratpaşa"
+    },
+    {
+     "@type": "City",
+     "name": "Mersin"
+    },
+    {
      "@type": "Country",
      "name": "Türkiye"
     }
@@ -470,11 +508,11 @@
         <span style="font-family:'Poppins';font-weight:700;font-size:18px;letter-spacing:.5px;color:#15202b">MTN<span style="color:#c8102e">.</span>İZOLASYON</span>
       </a>
       <nav class="r-nav" aria-label="Ana menü" style="display:flex;align-items:center;gap:34px">
-        <a href="/#about" class="r-navlink" style="font-size:14.5px;font-weight:600;color:#3a454f;text-decoration:none">Hakkımızda</a>
+        <a href="/hakkimizda/" class="r-navlink" style="font-size:14.5px;font-weight:600;color:#3a454f;text-decoration:none">Hakkımızda</a>
         <a href="/hizmetler/" class="r-navlink" style="font-size:14.5px;font-weight:600;color:#3a454f;text-decoration:none">Hizmetler</a>
         <a href="/projeler/" class="r-navlink" aria-current="page" style="font-size:14.5px;font-weight:600;color:#3a454f;text-decoration:none">Projeler</a>
-        <a href="/#bolgeler" class="r-navlink" style="font-size:14.5px;font-weight:600;color:#3a454f;text-decoration:none">Bölgeler</a>
-        <a href="/#faq" class="r-navlink" style="font-size:14.5px;font-weight:600;color:#3a454f;text-decoration:none">S.S.S.</a>
+        <a href="/galeri/" class="r-navlink" style="font-size:14.5px;font-weight:600;color:#3a454f;text-decoration:none">Galeri</a>
+        <a href="/iletisim/" class="r-navlink" style="font-size:14.5px;font-weight:600;color:#3a454f;text-decoration:none">İletişim</a>
         <button id="themeToggle" type="button" class="theme-toggle" aria-label="Gece / Gündüz modu" title="Gece / Gündüz modu">
           <svg aria-hidden="true" focusable="false" class="ic-moon" viewBox="0 0 24 24" width="19" height="19" fill="currentColor"><path d="M12.7 2.3A1 1 0 0 0 11.6 3.7 7 7 0 1 1 3.7 11.6 1 1 0 0 0 2.3 12.7 9 9 0 1 0 12.7 2.3z"></path></svg>
           <svg aria-hidden="true" focusable="false" class="ic-sun" viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4.2"></circle><path d="M12 2v2.4M12 19.6V22M2 12h2.4M19.6 12H22M4.9 4.9l1.7 1.7M17.4 17.4l1.7 1.7M19.1 4.9l-1.7 1.7M6.6 17.4l-1.7 1.7"></path></svg>
@@ -498,12 +536,12 @@
         <button class="mnav-close" type="button" aria-label="Menuyu kapat" data-mnav-close>&times;</button>
       </div>
       <nav aria-label="Mobil site menusu">
-        <a class="mnav-link" href="/#about">Hakk&#305;m&#305;zda <span style="color:#c8102e">&rsaquo;</span></a>
+        <a class="mnav-link" href="/hakkimizda/">Hakk&#305;m&#305;zda <span style="color:#c8102e">&rsaquo;</span></a>
         <a class="mnav-link" href="/hizmetler/">Hizmetler <span style="color:#c8102e">&rsaquo;</span></a>
         <a class="mnav-link" href="/projeler/" aria-current="page">Projeler <span style="color:#c8102e">&rsaquo;</span></a>
-        <a class="mnav-link" href="/#bolgeler">Hizmet B&#246;lgeleri <span style="color:#c8102e">&rsaquo;</span></a>
-        <a class="mnav-link" href="/#faq">S&#305;k&#231;a Sorulan Sorular <span style="color:#c8102e">&rsaquo;</span></a>
-        <a class="mnav-link" href="/#contact">&#304;leti&#351;im <span style="color:#c8102e">&rsaquo;</span></a>
+        <a class="mnav-link" href="/galeri/">Saha Foto&#287;raflar&#305; <span style="color:#c8102e">&rsaquo;</span></a>
+        <a class="mnav-link" href="/izolasyon-fiyatlari/">&#304;zolasyon Fiyatlar&#305; <span style="color:#c8102e">&rsaquo;</span></a>
+        <a class="mnav-link" href="/iletisim/">&#304;leti&#351;im <span style="color:#c8102e">&rsaquo;</span></a>
       </nav>
       <a class="mnav-cta call" href="tel:+905302582034"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.2.4 2.4.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1l-2.3 2.2z"></path></svg>
         Hemen Ara</a>
@@ -548,7 +586,7 @@
         <h1 style="font-family:'Poppins';font-weight:700;font-size:clamp(30px,3.6vw,50px);line-height:1.06;letter-spacing:-1px;color:#15202b;max-width:900px">Alanya Oba Stadyumu: Stadyum Su Yalıtımı ve Teras İzolasyonu</h1>
         <p style="color:#586572;font-size:18px;line-height:1.65;margin-top:20px;max-width:820px">Alanya Oba Stadyumu, teras ve çatı yüzeylerinde yüksek kaliteli malzemelerle profesyonel su ve ısı yalıtımı uygulanan bir kamu spor tesisi projesidir.</p>
         <figure style="margin:40px 0 0">
-          <img src="/images/carousel/slide-037.webp" alt="Teras membranında şaloma ile detay birleşimi yapan MTN İzolasyon ekibi" width="900" height="1200" fetchpriority="high" decoding="async" style="width:100%;height:420px;object-fit:cover;display:block">
+          <img src="/images/carousel/slide-037.webp" srcset="/images/carousel/slide-037-480.webp 480w, /images/carousel/slide-037.webp 900w" sizes="(max-width:600px) 100vw, (max-width:900px) 50vw, 800px" alt="Teras membranında şaloma ile detay birleşimi yapan MTN İzolasyon ekibi" width="900" height="1200" fetchpriority="high" decoding="async" style="width:100%;height:420px;object-fit:cover;display:block">
           <figcaption style="color:#8c97a1;font-size:13px;line-height:1.6;margin-top:12px">Teras membranında şalomayla detay birleşimi — MTN İzolasyon saha arşivinden. Yapının kendi görüntüsü için aşağıdaki konum bölümüne bakabilirsiniz.</figcaption>
         </figure>
       </div>
@@ -801,17 +839,17 @@
           <a href="/hizmetler/" style="color:#15202b;font-weight:700;font-size:15px;text-decoration:none;border-bottom:2px solid #c8102e;padding-bottom:4px;white-space:nowrap">Tüm hizmetler →</a>
         </div>
         <div class="r-svc" style="display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:#e3e6e8;border:1px solid #e3e6e8">
-          <a href="/hizmetler/" class="r-svc-card" style="display:block;text-decoration:none">
+          <a href="/hizmetler/teras-cati-izolasyonu/" class="r-svc-card" style="display:block;text-decoration:none">
             <h3 style="font-family:'Poppins';font-weight:600;font-size:20px;color:#15202b">Islak Zemin, Teras ve Çatı İzolasyonu</h3>
             <p style="color:#586572;font-size:15px;line-height:1.7;margin-top:12px">Teras, çatı ve ıslak hacimlerde likit membran ve polimer esaslı su yalıtımı. Karmaşık geometrili detaylarda ek yeri bırakmadan tam sızdırmazlık.</p>
             <span style="display:inline-block;margin-top:14px;color:#c8102e;font-weight:700;font-size:14px">Hizmet detayı →</span>
           </a>
-          <a href="/hizmetler/" class="r-svc-card" style="display:block;text-decoration:none">
+          <a href="/hizmetler/membran-uygulamasi/" class="r-svc-card" style="display:block;text-decoration:none">
             <h3 style="font-family:'Poppins';font-weight:600;font-size:20px;color:#15202b">Membran Uygulaması</h3>
             <p style="color:#586572;font-size:15px;line-height:1.7;margin-top:12px">Teras, çatı ve temellerde bitüm, PVC veya TPO esaslı esnek rulo su yalıtım örtüsü. Geniş yüzeylerde en ekonomik ve en uzun ömürlü çözüm.</p>
             <span style="display:inline-block;margin-top:14px;color:#c8102e;font-weight:700;font-size:14px">Hizmet detayı →</span>
           </a>
-          <a href="/hizmetler/" class="r-svc-card" style="display:block;text-decoration:none">
+          <a href="/hizmetler/su-kacagi-enjeksiyon/" class="r-svc-card" style="display:block;text-decoration:none">
             <h3 style="font-family:'Poppins';font-weight:600;font-size:20px;color:#15202b">Enjeksiyon Uygulamaları</h3>
             <p style="color:#586572;font-size:15px;line-height:1.7;margin-top:12px">Yapısal çatlaklardan gelen aktif sızıntıyı durdurmak için poliüretan ve epoksi esaslı basınçlı reçine enjeksiyonu. Yapıyı sökmeden nokta çözüm.</p>
             <span style="display:inline-block;margin-top:14px;color:#c8102e;font-weight:700;font-size:14px">Hizmet detayı →</span>
@@ -901,6 +939,13 @@
         </div>
       </div>
       <div>
+        <div style="color:#fff;font-family:'Poppins';font-weight:600;font-size:15px;margin-bottom:18px">Kurumsal</div>
+        <div style="display:flex;flex-direction:column;gap:11px;font-size:14.5px;margin-bottom:26px">
+          <a href="/hakkimizda/" style="color:#aab3ba;text-decoration:none">Hakkımızda</a>
+          <a href="/galeri/" style="color:#aab3ba;text-decoration:none">Saha Fotoğrafları</a>
+          <a href="/izolasyon-fiyatlari/" style="color:#aab3ba;text-decoration:none">İzolasyon Fiyatları</a>
+          <a href="/iletisim/" style="color:#aab3ba;text-decoration:none">İletişim</a>
+        </div>
         <div style="color:#fff;font-family:'Poppins';font-weight:600;font-size:15px;margin-bottom:18px">İletişim</div>
         <div style="display:flex;flex-direction:column;gap:11px;font-size:14.5px">
           <a href="tel:+905302582034" style="display:flex;align-items:center;gap:9px;color:#aab3ba;text-decoration:none">

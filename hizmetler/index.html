@@ -33,16 +33,16 @@
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="manifest" href="/site.webmanifest">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="preload" href="/fonts/manrope-400-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/poppins-700-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/fonts/fonts.css">
 <script>
   /* Apply saved theme before paint to avoid a flash */
   (function(){try{var t=localStorage.getItem('mtn-theme');if(!t)t=(window.matchMedia&&matchMedia('(prefers-color-scheme: dark)').matches)?'dark':'light';if(t==='dark')document.documentElement.classList.add('dark');}catch(e){}})();
 </script>
 <style>
   *{box-sizing:border-box;margin:0;padding:0}
-  body{font-family:'Manrope',sans-serif;color:#15202b;background:#fff;-webkit-font-smoothing:antialiased}
+  body{font-family:'Manrope',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;color:#15202b;background:#fff;-webkit-font-smoothing:antialiased}
   ::selection{background:#c8102e;color:#fff}
   a{color:inherit}
 
@@ -232,6 +232,22 @@
     .r-svc-card,.kesit,figure{break-inside:avoid}
     img{max-width:100% !important;height:auto !important}
   }
+
+  /* ---------- Font yedek yığınları (self-host fontlar inmezse) ---------- */
+  [style*="font-family:'Poppins'"]{font-family:'Poppins',system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif !important}
+  [style*="font-family:'Manrope'"]{font-family:'Manrope',system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif !important}
+
+  /* ---------- TABLO ---------- */
+  .tbl-sar{overflow-x:auto;margin-top:32px;border:1px solid #e3e6e8;background:#fff}
+  .tbl{width:100%;border-collapse:collapse;font-size:15.5px;min-width:680px}
+  .tbl th{text-align:left;padding:15px 18px;background:#f4f5f6;color:#15202b;font-family:'Poppins';font-weight:600;font-size:14.5px;border-bottom:1px solid #e3e6e8;white-space:nowrap}
+  .tbl td{padding:15px 18px;color:#586572;line-height:1.6;border-bottom:1px solid #eceef0;vertical-align:top}
+  .tbl tr:last-child td{border-bottom:none}
+  .tbl td:first-child{color:#15202b;font-weight:600}
+  html.dark .tbl-sar{background:#161c24;border-color:#252c35}
+  html.dark .tbl th{background:#10151c;color:#e8edf2;border-bottom-color:#252c35}
+  html.dark .tbl td{color:#aeb7c2;border-bottom-color:#222932}
+  html.dark .tbl td:first-child{color:#e8edf2}
 </style>
 
 <style id="mtn-theme">
@@ -303,7 +319,9 @@
    },
    "breadcrumb": {
     "@id": "https://www.mtnizolasyon.com/hizmetler/#breadcrumb"
-   }
+   },
+   "dateModified": "2026-09-05",
+   "datePublished": "2026-09-05"
   },
   {
    "@type": "ItemList",
@@ -388,6 +406,38 @@
      "name": "Antalya"
     },
     {
+     "@type": "City",
+     "name": "Manavgat"
+    },
+    {
+     "@type": "City",
+     "name": "Side"
+    },
+    {
+     "@type": "City",
+     "name": "Gazipaşa"
+    },
+    {
+     "@type": "City",
+     "name": "Serik"
+    },
+    {
+     "@type": "City",
+     "name": "Kemer"
+    },
+    {
+     "@type": "City",
+     "name": "Konyaaltı"
+    },
+    {
+     "@type": "City",
+     "name": "Muratpaşa"
+    },
+    {
+     "@type": "City",
+     "name": "Mersin"
+    },
+    {
      "@type": "Country",
      "name": "Türkiye"
     }
@@ -405,6 +455,47 @@
    "publisher": {
     "@id": "https://www.mtnizolasyon.com/#business"
    }
+  },
+  {
+   "@type": "FAQPage",
+   "@id": "https://www.mtnizolasyon.com/hizmetler/#faq",
+   "isPartOf": {
+    "@id": "https://www.mtnizolasyon.com/hizmetler/#webpage"
+   },
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "Hangi izolasyon yöntemine ihtiyacım olduğunu nasıl anlarım?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Seçimi beş şey belirler: yüzeyin büyüklüğü ve geometrisi, yalıtımın üzerine ne geleceği, suyun hangi yönden geldiği, yapının hareket edip etmediği ve suyun sızıntı mı yoksa basınçlı yeraltı suyu mu olduğu. Bu başlıklar netleştiğinde uygun yöntem genellikle tek seçeneğe iner."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Su kaçağını, yalıtımı komple yenilemeden durdurmak mümkün mü?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Sızıntı belirli bir çatlak, derz veya boru geçişinden geliyorsa mümkündür. Poliüretan esaslı reçine enjeksiyonu, aktif su akışı sürerken bile çatlağın içine basınçla verilir ve akışı durdurur; kazı gerektirmez. Yüzeyin tamamı geçirimli hâle gelmişse enjeksiyon yalnızca zaman kazandırır."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Negatif yönlü yalıtım, dıştan yapılan yalıtımın yerini tutar mı?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Birebir tutmaz, ama kazı yapılamayan yapılarda geçerli ve kalıcı bir çözümdür. Dıştan yapılan pozitif yalıtımda beton suyla hiç temas etmez; negatif yönde beton ıslanmaya devam eder. Bu nedenle yüzeye yapışan kaplamalar değil, betonun kılcal boşluklarını içeriden tıkayan kristalize sistemler kullanılır."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Mevcut yalıtımın üzerine yeni katman yapılabilir mi?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Bazı durumlarda yapılabilir. Yeni katmanın eskisiyle kimyasal olarak uyumlu olması, alttaki katmanın yüzeye yapışık ve kuru olması ve altta hapsolmuş nem bulunmaması gerekir; nem hapsolmuşsa yeni katman kısa sürede kabarır. Ayrıca yükselen kot, eğim ve gider seviyelerini bozmamalıdır."
+     }
+    }
+   ]
   }
  ]
 }
@@ -421,11 +512,11 @@
         <span style="font-family:'Poppins';font-weight:700;font-size:18px;letter-spacing:.5px;color:#15202b">MTN<span style="color:#c8102e">.</span>İZOLASYON</span>
       </a>
       <nav class="r-nav" aria-label="Ana menü" style="display:flex;align-items:center;gap:34px">
-        <a href="/#about" class="r-navlink" style="font-size:14.5px;font-weight:600;color:#3a454f;text-decoration:none">Hakkımızda</a>
+        <a href="/hakkimizda/" class="r-navlink" style="font-size:14.5px;font-weight:600;color:#3a454f;text-decoration:none">Hakkımızda</a>
         <a href="/hizmetler/" class="r-navlink" aria-current="page" style="font-size:14.5px;font-weight:600;color:#3a454f;text-decoration:none">Hizmetler</a>
         <a href="/projeler/" class="r-navlink" style="font-size:14.5px;font-weight:600;color:#3a454f;text-decoration:none">Projeler</a>
-        <a href="/#bolgeler" class="r-navlink" style="font-size:14.5px;font-weight:600;color:#3a454f;text-decoration:none">Bölgeler</a>
-        <a href="/#faq" class="r-navlink" style="font-size:14.5px;font-weight:600;color:#3a454f;text-decoration:none">S.S.S.</a>
+        <a href="/galeri/" class="r-navlink" style="font-size:14.5px;font-weight:600;color:#3a454f;text-decoration:none">Galeri</a>
+        <a href="/iletisim/" class="r-navlink" style="font-size:14.5px;font-weight:600;color:#3a454f;text-decoration:none">İletişim</a>
         <button id="themeToggle" type="button" class="theme-toggle" aria-label="Gece / Gündüz modu" title="Gece / Gündüz modu">
           <svg aria-hidden="true" focusable="false" class="ic-moon" viewBox="0 0 24 24" width="19" height="19" fill="currentColor"><path d="M12.7 2.3A1 1 0 0 0 11.6 3.7 7 7 0 1 1 3.7 11.6 1 1 0 0 0 2.3 12.7 9 9 0 1 0 12.7 2.3z"></path></svg>
           <svg aria-hidden="true" focusable="false" class="ic-sun" viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4.2"></circle><path d="M12 2v2.4M12 19.6V22M2 12h2.4M19.6 12H22M4.9 4.9l1.7 1.7M17.4 17.4l1.7 1.7M19.1 4.9l-1.7 1.7M6.6 17.4l-1.7 1.7"></path></svg>
@@ -449,12 +540,12 @@
         <button class="mnav-close" type="button" aria-label="Menuyu kapat" data-mnav-close>&times;</button>
       </div>
       <nav aria-label="Mobil site menusu">
-        <a class="mnav-link" href="/#about">Hakk&#305;m&#305;zda <span style="color:#c8102e">&rsaquo;</span></a>
+        <a class="mnav-link" href="/hakkimizda/">Hakk&#305;m&#305;zda <span style="color:#c8102e">&rsaquo;</span></a>
         <a class="mnav-link" href="/hizmetler/" aria-current="page">Hizmetler <span style="color:#c8102e">&rsaquo;</span></a>
         <a class="mnav-link" href="/projeler/">Projeler <span style="color:#c8102e">&rsaquo;</span></a>
-        <a class="mnav-link" href="/#bolgeler">Hizmet B&#246;lgeleri <span style="color:#c8102e">&rsaquo;</span></a>
-        <a class="mnav-link" href="/#faq">S&#305;k&#231;a Sorulan Sorular <span style="color:#c8102e">&rsaquo;</span></a>
-        <a class="mnav-link" href="/#contact">&#304;leti&#351;im <span style="color:#c8102e">&rsaquo;</span></a>
+        <a class="mnav-link" href="/galeri/">Saha Foto&#287;raflar&#305; <span style="color:#c8102e">&rsaquo;</span></a>
+        <a class="mnav-link" href="/izolasyon-fiyatlari/">&#304;zolasyon Fiyatlar&#305; <span style="color:#c8102e">&rsaquo;</span></a>
+        <a class="mnav-link" href="/iletisim/">&#304;leti&#351;im <span style="color:#c8102e">&rsaquo;</span></a>
       </nav>
       <a class="mnav-cta call" href="tel:+905302582034"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.2.4 2.4.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1l-2.3 2.2z"></path></svg>
         Hemen Ara</a>
@@ -561,6 +652,157 @@
       </div>
     </section>
 
+    <section style="background:#f4f5f6;padding:92px 0">
+      <div style="max-width:1340px;margin:0 auto;padding:0 32px">
+        <div style="display:flex;align-items:center;gap:12px;margin-bottom:18px">
+          <span style="width:30px;height:3px;background:#c8102e"></span>
+          <span style="color:#c8102e;font-weight:700;font-size:13px;letter-spacing:2.5px">HANGI YÖNTEM NEREDE KULLANILIR?</span>
+        </div>
+        <h2 style="font-family:'Poppins';font-weight:700;font-size:clamp(28px,3vw,42px);line-height:1.1;letter-spacing:-1px;color:#15202b;max-width:900px">Hangi yöntem nerede kullanılır?</h2>
+        <p style="color:#586572;font-size:17px;line-height:1.65;margin-top:20px;max-width:900px">Bir yöntemin sınırını bilmek, güçlü yanını bilmek kadar önemlidir; yanlış yerde kullanılan doğru malzeme de sonuç vermez.</p>
+        <div class="tbl-sar">
+          <table class="tbl">
+            <thead><tr><th scope="col">Yöntem</th><th scope="col">Nerede kullanılır</th><th scope="col">Güçlü yanı</th><th scope="col">Sınırları</th></tr></thead>
+            <tbody><tr><td>Teras ve çatı izolasyonu</td><td>Teras, çatı, balkon, ıslak hacim</td><td>Yapının en çok zorlanan yüzeyinde toplu koruma sağlar</td><td>Eğim ve gider düzeni yanlışsa hiçbir malzeme kalıcı olmaz</td></tr><tr><td>Havuz izolasyonu</td><td>Havuz kabuğu, su deposu, süs havuzu</td><td>Sürekli su basıncı altında çalışır; üzerine seramik yapıştırılabilir</td><td>Kabukta yapısal hareket sürüyorsa önce onun durdurulması gerekir</td></tr><tr><td>Su kaçağı ve enjeksiyon</td><td>Perde duvar, temel, asansör kuyusu; aktif su akan çatlaklar</td><td>Kazı yapmadan çatlağın içine müdahale eder, sonucu aynı gün görülür</td><td>Nokta çözümdür; yüzeyin tamamı geçirimliyse tek başına yetmez</td></tr><tr><td>Membran uygulaması</td><td>Geniş teras ve çatı, temel altı, perde duvar</td><td>Kalınlığı fabrikada belirlenmiş, dayanımı öngörülebilir kalın katman verir</td><td>Bindirme yerleri en hassas noktadır; detaylı yüzeyde işçilik zorlaşır</td></tr><tr><td>Negatif yönlü kristalize yalıtım</td><td>Bodrum, asansör kuyusu, su deposu; kazı yapılamayan yapılar</td><td>İç mekândan, suyun geldiği yönün tersinden uygulanır; betonla bütünleşir</td><td>Sağlam betonarme ister; tuğla, gazbeton ve hareketli derzlerde çalışmaz</td></tr><tr><td>Bentonit uygulamaları</td><td>Temel altı ve perde duvarın toprak tarafı</td><td>Nemli yüzeye uygulanır, küçük hasarlarda şişerek kendini kapatır</td><td>Beton ile zemin arasında sıkışık kalmadığı yerde çalışmaz</td></tr></tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+    <section style="background:#fff;padding:92px 0">
+      <div style="max-width:1340px;margin:0 auto;padding:0 32px">
+        <div style="display:flex;align-items:center;gap:12px;margin-bottom:18px">
+          <span style="width:30px;height:3px;background:#c8102e"></span>
+          <span style="color:#c8102e;font-weight:700;font-size:13px;letter-spacing:2.5px">DOĞRU YÖNTEMI NE BELIRLER?</span>
+        </div>
+        <h2 style="font-family:'Poppins';font-weight:700;font-size:clamp(28px,3vw,42px);line-height:1.1;letter-spacing:-1px;color:#15202b;max-width:900px">Doğru yöntemi ne belirler?</h2>
+        <p style="color:#586572;font-size:17px;line-height:1.65;margin-top:20px;max-width:900px">Yöntem seçimi malzeme markasıyla değil, yapıya ilişkin beş soruyla başlar.</p>
+        <div class="r-svc" style="display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:#e3e6e8;border:1px solid #e3e6e8;margin-top:40px">
+          <div class="r-svc-card">
+            <h3 style="font-family:'Poppins';font-weight:600;font-size:20px;color:#15202b">Yüzeyin büyüklüğü ve geometrisi</h3>
+            <p style="color:#586572;font-size:15.5px;line-height:1.75;margin-top:12px">Geniş ve sade bir terasta rulo membran hızlı ve ekonomiktir. Çok sayıda baca ve boru çıkışı varsa her çıkış bir ek yeri demektir; orada eksiz likit membran daha güvenlidir.</p>
+          </div>
+          <div class="r-svc-card">
+            <h3 style="font-family:'Poppins';font-weight:600;font-size:20px;color:#15202b">Yalıtımın üzerine ne gelecek?</h3>
+            <p style="color:#586572;font-size:15.5px;line-height:1.75;margin-top:12px">Üzerine seramik gelecekse yapıştırıcının tutunabildiği çimento esaslı sürme sistemler, çakıl serilecekse veya ters teras yapılacaksa rulo membran uygundur. Trafiğe açık yüzeyde ayrıca koruma katmanı gerekir.</p>
+          </div>
+          <div class="r-svc-card">
+            <h3 style="font-family:'Poppins';font-weight:600;font-size:20px;color:#15202b">Suyun geldiği yön</h3>
+            <p style="color:#586572;font-size:15.5px;line-height:1.75;margin-top:12px">Su malzemeyi yapıya doğru bastırdığında (pozitif yön) yalıtım en verimli çalışır. İçeriden yapılan negatif uygulamada su malzemeyi koparmaya çalışır; orada yüzey kaplaması değil, betona nüfuz eden kristalize sistem kullanılır.</p>
+          </div>
+          <div class="r-svc-card">
+            <h3 style="font-family:'Poppins';font-weight:600;font-size:20px;color:#15202b">Yapı hareket ediyor mu?</h3>
+            <p style="color:#586572;font-size:15.5px;line-height:1.75;margin-top:12px">Oturma ve termal hareketin sürdüğü yapılarda çatlak köprüleme kabiliyeti belirleyicidir. Elastik likit membranlar ve polyester taşıyıcılı örtüler hareketi bir ölçüde yutar; rijit çimento esaslı sistemler yutmaz, derz bandı ister.</p>
+          </div>
+          <div class="r-svc-card">
+            <h3 style="font-family:'Poppins';font-weight:600;font-size:20px;color:#15202b">Sızıntı suyu mu, basınçlı su mu?</h3>
+            <p style="color:#586572;font-size:15.5px;line-height:1.75;margin-top:12px">Yağmurdan sonra birkaç saat görünen nem ile yeraltı suyunun sürekli bastırdığı su aynı şey değildir. Drenaj çözülmeden yapılan yalıtım kısa sürede aynı noktadan verir.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section style="background:#f4f5f6;padding:92px 0">
+      <div style="max-width:1340px;margin:0 auto;padding:0 32px">
+        <div style="display:flex;align-items:center;gap:12px;margin-bottom:18px">
+          <span style="width:30px;height:3px;background:#c8102e"></span>
+          <span style="color:#c8102e;font-weight:700;font-size:13px;letter-spacing:2.5px">MALZEME AILELERI ARASINDAKI FARK</span>
+        </div>
+        <h2 style="font-family:'Poppins';font-weight:700;font-size:clamp(28px,3vw,42px);line-height:1.1;letter-spacing:-1px;color:#15202b;max-width:900px">Malzeme aileleri arasındaki fark</h2>
+        <p style="color:#586572;font-size:17px;line-height:1.65;margin-top:20px;max-width:900px">Ürün ismi çok, ama su yalıtımı malzemeleri beş temel aileye ayrılır ve her ailenin çalışma prensibi farklıdır.</p>
+        <div class="r-svc" style="display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:#e3e6e8;border:1px solid #e3e6e8;margin-top:40px">
+          <div class="r-svc-card">
+            <h3 style="font-family:'Poppins';font-weight:600;font-size:20px;color:#15202b">Bitümlü örtü (rulo membran)</h3>
+            <p style="color:#586572;font-size:15.5px;line-height:1.75;margin-top:12px">Polyester veya cam tülü taşıyıcı üzerine modifiye bitüm sürülerek fabrikada üretilir; kalınlığı sabit olduğundan sonuç öngörülebilirdir. Zayıf noktası bindirme yerleridir, güneşe açık kalacaksa üstü arduvazla korunur.</p>
+          </div>
+          <div class="r-svc-card">
+            <h3 style="font-family:'Poppins';font-weight:600;font-size:20px;color:#15202b">Likit (sürme) membran</h3>
+            <p style="color:#586572;font-size:15.5px;line-height:1.75;margin-top:12px">Sıvı hâlde sürülür, kürünü aldığında eksiz tek parça bir katman oluşturur ve karmaşık detaylara uyar. Kalınlık uygulayıcının sarfiyat disiplinine bağlıdır; yüzey nemi konusunda tolerans tanımaz.</p>
+          </div>
+          <div class="r-svc-card">
+            <h3 style="font-family:'Poppins';font-weight:600;font-size:20px;color:#15202b">Çimento esaslı sürme sistemler</h3>
+            <p style="color:#586572;font-size:15.5px;line-height:1.75;margin-top:12px">İki bileşenli esnek harçlar mineral yüzeye kimyasal olarak tutunur; sürekli suya temas eden hacimler için tasarlanmıştır ve üzerine doğrudan seramik yapıştırılabilir. Çatlak köprüleme kabiliyeti sınırlıdır.</p>
+          </div>
+          <div class="r-svc-card">
+            <h3 style="font-family:'Poppins';font-weight:600;font-size:20px;color:#15202b">Kristalize sistemler</h3>
+            <p style="color:#586572;font-size:15.5px;line-height:1.75;margin-top:12px">Yüzeyde film oluşturmaz; suyla taşınarak betonun kılcal boşluklarına girer ve orada kristal oluşturarak boşlukları tıkar. Koruma beton içinde kaldığı için negatif yönde de çalışır; sağlam betonarme yüzey şarttır.</p>
+          </div>
+          <div class="r-svc-card">
+            <h3 style="font-family:'Poppins';font-weight:600;font-size:20px;color:#15202b">Bentonit</h3>
+            <p style="color:#586572;font-size:15.5px;line-height:1.75;margin-top:12px">Sodyum bentonit kili suyla temas ettiğinde şişerek geçirimsiz bir jel oluşturur; nemli yüzeye uygulanabilir ve küçük delinmeleri kendisi kapatır. Sıkışık kalmadığı yerde çalışmaz.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section style="background:#fff;padding:92px 0">
+      <div style="max-width:1340px;margin:0 auto;padding:0 32px">
+        <div style="display:flex;align-items:center;gap:12px;margin-bottom:18px">
+          <span style="width:30px;height:3px;background:#c8102e"></span>
+          <span style="color:#c8102e;font-weight:700;font-size:13px;letter-spacing:2.5px">YALITIM NE ZAMAN YENILENMELI?</span>
+        </div>
+        <h2 style="font-family:'Poppins';font-weight:700;font-size:clamp(28px,3vw,42px);line-height:1.1;letter-spacing:-1px;color:#15202b;max-width:900px">Yalıtım ne zaman yenilenmeli?</h2>
+        <p style="color:#586572;font-size:17px;line-height:1.65;margin-top:20px;max-width:900px">Su yalıtımı görünmeyen bir katmandır; bozulduğunu genellikle yapının kendisi haber verir. Ancak leke çıktığında su çoktan içeri girmiş olur.</p>
+        <div class="r-svc" style="display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:#e3e6e8;border:1px solid #e3e6e8;margin-top:40px">
+          <div class="r-svc-card">
+            <h3 style="font-family:'Poppins';font-weight:600;font-size:20px;color:#15202b">Yapı tarafındaki belirtiler</h3>
+            <p style="color:#586572;font-size:15.5px;line-height:1.75;margin-top:12px">Tavanda sarı-kahve lekeler, boyada kabarma, sıva dökülmesi, bodrum duvarında beyaz çiçeklenme ve tavanda kireç sarkıtları suyun katmanı geçtiğini gösterir. Havuzlarda buharlaşmayla açıklanamayan seviye düşüşü aynı anlama gelir.</p>
+          </div>
+          <div class="r-svc-card">
+            <h3 style="font-family:'Poppins';font-weight:600;font-size:20px;color:#15202b">Katmanın yaşlanma işaretleri</h3>
+            <p style="color:#586572;font-size:15.5px;line-height:1.75;margin-top:12px">Yüzeyde kabarcıklanma, büzüşme, bindirme yerlerinde açılma, arduvaz dökülmesi, parapet dibi ve gider çevresinde çatlama ömrün tamamlandığını gösterir. Yağış mevsimi öncesi gözle kontrol çoğu büyük onarımı gereksiz kılar.</p>
+          </div>
+          <div class="r-svc-card">
+            <h3 style="font-family:'Poppins';font-weight:600;font-size:20px;color:#15202b">Nokta onarım mı, komple yenileme mi?</h3>
+            <p style="color:#586572;font-size:15.5px;line-height:1.75;margin-top:12px">Hasar sınırlı ve katman genel olarak sağlamsa lokal onarım doğru karardır. Bindirmeler yüzeyin genelinde açılmışsa veya sızıntı her yağışta başka bir noktadan çıkıyorsa sistemin tamamı yenilenmelidir.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section style="background:#fff;padding:92px 0">
+      <div style="max-width:1340px;margin:0 auto;padding:0 32px">
+        <div style="display:flex;align-items:center;gap:12px;margin-bottom:18px">
+          <span style="width:30px;height:3px;background:#c8102e"></span>
+          <span style="color:#c8102e;font-weight:700;font-size:13px;letter-spacing:2.5px">SIKÇA SORULAN SORULAR</span>
+        </div>
+        <h2 style="font-family:'Poppins';font-weight:700;font-size:clamp(28px,3vw,42px);line-height:1.1;letter-spacing:-1px;color:#15202b">Merak edilenler</h2>
+        <div style="display:flex;flex-direction:column;gap:14px;margin-top:40px;max-width:980px">
+          <div class="faq-item">
+            <div class="faq-q" role="button" tabindex="0" aria-expanded="false" onclick="toggleFaq(this)">
+              <span>Hangi izolasyon yöntemine ihtiyacım olduğunu nasıl anlarım?</span>
+              <span class="faq-ic">+</span>
+            </div>
+            <div class="faq-a">
+              <p style="color:#586572;font-size:16px;line-height:1.65;padding:0 28px 26px">Seçimi beş şey belirler: yüzeyin büyüklüğü ve geometrisi, yalıtımın üzerine ne geleceği, suyun hangi yönden geldiği, yapının hareket edip etmediği ve suyun sızıntı mı yoksa basınçlı yeraltı suyu mu olduğu. Bu başlıklar netleştiğinde uygun yöntem genellikle tek seçeneğe iner.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-q" role="button" tabindex="0" aria-expanded="false" onclick="toggleFaq(this)">
+              <span>Su kaçağını, yalıtımı komple yenilemeden durdurmak mümkün mü?</span>
+              <span class="faq-ic">+</span>
+            </div>
+            <div class="faq-a">
+              <p style="color:#586572;font-size:16px;line-height:1.65;padding:0 28px 26px">Sızıntı belirli bir çatlak, derz veya boru geçişinden geliyorsa mümkündür. Poliüretan esaslı reçine enjeksiyonu, aktif su akışı sürerken bile çatlağın içine basınçla verilir ve akışı durdurur; kazı gerektirmez. Yüzeyin tamamı geçirimli hâle gelmişse enjeksiyon yalnızca zaman kazandırır.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-q" role="button" tabindex="0" aria-expanded="false" onclick="toggleFaq(this)">
+              <span>Negatif yönlü yalıtım, dıştan yapılan yalıtımın yerini tutar mı?</span>
+              <span class="faq-ic">+</span>
+            </div>
+            <div class="faq-a">
+              <p style="color:#586572;font-size:16px;line-height:1.65;padding:0 28px 26px">Birebir tutmaz, ama kazı yapılamayan yapılarda geçerli ve kalıcı bir çözümdür. Dıştan yapılan pozitif yalıtımda beton suyla hiç temas etmez; negatif yönde beton ıslanmaya devam eder. Bu nedenle yüzeye yapışan kaplamalar değil, betonun kılcal boşluklarını içeriden tıkayan kristalize sistemler kullanılır.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-q" role="button" tabindex="0" aria-expanded="false" onclick="toggleFaq(this)">
+              <span>Mevcut yalıtımın üzerine yeni katman yapılabilir mi?</span>
+              <span class="faq-ic">+</span>
+            </div>
+            <div class="faq-a">
+              <p style="color:#586572;font-size:16px;line-height:1.65;padding:0 28px 26px">Bazı durumlarda yapılabilir. Yeni katmanın eskisiyle kimyasal olarak uyumlu olması, alttaki katmanın yüzeye yapışık ve kuru olması ve altta hapsolmuş nem bulunmaması gerekir; nem hapsolmuşsa yeni katman kısa sürede kabarır. Ayrıca yükselen kot, eğim ve gider seviyelerini bozmamalıdır.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
     <section style="background:#15202b;color:#fff;padding:88px 0">
       <div style="max-width:1340px;margin:0 auto;padding:0 32px">
         <h2 style="font-family:'Poppins';font-weight:700;font-size:clamp(28px,3.2vw,44px);line-height:1.08;letter-spacing:-1px;max-width:760px">Hangi yöntemin gerektiğini birlikte belirleyelim</h2>
@@ -594,6 +836,13 @@
         </div>
       </div>
       <div>
+        <div style="color:#fff;font-family:'Poppins';font-weight:600;font-size:15px;margin-bottom:18px">Kurumsal</div>
+        <div style="display:flex;flex-direction:column;gap:11px;font-size:14.5px;margin-bottom:26px">
+          <a href="/hakkimizda/" style="color:#aab3ba;text-decoration:none">Hakkımızda</a>
+          <a href="/galeri/" style="color:#aab3ba;text-decoration:none">Saha Fotoğrafları</a>
+          <a href="/izolasyon-fiyatlari/" style="color:#aab3ba;text-decoration:none">İzolasyon Fiyatları</a>
+          <a href="/iletisim/" style="color:#aab3ba;text-decoration:none">İletişim</a>
+        </div>
         <div style="color:#fff;font-family:'Poppins';font-weight:600;font-size:15px;margin-bottom:18px">İletişim</div>
         <div style="display:flex;flex-direction:column;gap:11px;font-size:14.5px">
           <a href="tel:+905302582034" style="display:flex;align-items:center;gap:9px;color:#aab3ba;text-decoration:none">
