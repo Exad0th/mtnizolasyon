@@ -1,4 +1,12 @@
 # ============================================================
+#  DİKKAT: www.mtnizolasyon.com şu anda NGINX üzerinde çalışıyor.
+#  nginx bu dosyayı OKUMAZ. Bu sunucudaki karşılığı için:
+#      _kurulum/nginx-ayarlari.conf
+#  Bu dosya, ileride Apache/LiteSpeed tabanlı bir barındırmaya
+#  geçilirse diye korunuyor.
+# ============================================================
+
+# ============================================================
 #  MTN İzolasyon — Apache yapılandırması
 #  Sunucu Nginx ise bu dosya işe yaramaz; karşılıkları için
 #  _kurulum/ klasöründeki nota bakın.
