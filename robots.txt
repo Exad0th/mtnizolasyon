@@ -1,4 +1,39 @@
+# ============================================================
+#  MTN İzolasyon — robots.txt
+#  https://www.mtnizolasyon.com/
+# ============================================================
+
 User-agent: *
 Allow: /
 
-Sitemap: https://mtn-izolasyon.vercel.app/sitemap.xml
+# Yedek ve geliştirme dosyaları taranmasın
+Disallow: /*.bak$
+Disallow: /*.zip$
+
+# --- Yapay zekâ / cevap motorları (marka görünürlüğü için açık) ---
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+# --- Agresif SEO tarayıcıları (sunucu yükünü azaltır) ---
+User-agent: AhrefsBot
+Crawl-delay: 10
+
+User-agent: SemrushBot
+Crawl-delay: 10
+
+User-agent: MJ12bot
+Disallow: /
+
+Sitemap: https://www.mtnizolasyon.com/sitemap.xml
