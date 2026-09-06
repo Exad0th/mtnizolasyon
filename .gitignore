@@ -1,15 +1,19 @@
-# Vercel / Claude tooling (machine-local, not part of the site)
-.vercel
+# ---------- Yerel yedekler (repoya girmez) ----------
+# optimizasyon öncesi ham fotoğraflar (~34 MB)
+images-original/
+# Google İşletme Profili / Search Console kurulum notları
+_kurulum/
+# siteden kaldırılan, telifi bize ait olmayan görseller
+_kaldirilan-gorseller/
+
+# ---------- Üretilen dosyalar ----------
+mtn-yayin.zip
+*.bak
+
+# ---------- Araç / sistem ----------
 .claude/
-
-# Dependencies
-node_modules/
-
-# Logs & OS junk
-*.log
+__pycache__/
+*.py[cod]
 .DS_Store
 Thumbs.db
-
-# Environment
-.env
-.env.*
+desktop.ini

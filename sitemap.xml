@@ -1,9 +1,132 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
-    <loc>https://mtn-izolasyon.vercel.app/</loc>
-    <lastmod>2026-06-19</lastmod>
+    <loc>https://www.mtnizolasyon.com/</loc>
+    <lastmod>2026-09-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://www.mtnizolasyon.com/images/og-cover.jpg</image:loc>
+      <image:title>MTN İzolasyon — Alanya su yalıtımı ve izolasyon</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.mtnizolasyon.com/images/carousel/slide-037.webp</image:loc>
+      <image:title>Teras membranında detay birleşimi — MTN İzolasyon</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.mtnizolasyon.com/images/carousel/slide-066.webp</image:loc>
+      <image:title>Havuzda yalıtım üzerine seramik uygulaması — MTN İzolasyon</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.mtnizolasyon.com/images/carousel/slide-095.webp</image:loc>
+      <image:title>Temel ve perde duvarda tamamlanmış su yalıtımı — MTN İzolasyon</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.mtnizolasyon.com/projeler/</loc>
+    <lastmod>2026-09-05</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.mtnizolasyon.com/images/carousel/slide-037.webp</image:loc>
+      <image:title>MTN İzolasyon proje referansları</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.mtnizolasyon.com/projeler/alanya-oba-stadyumu/</loc>
+    <lastmod>2026-09-05</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://www.mtnizolasyon.com/images/carousel/slide-037.webp</image:loc>
+      <image:title>Teras membranında detay birleşimi — MTN İzolasyon</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.mtnizolasyon.com/projeler/lonicera-otel-havuz-izolasyonu/</loc>
+    <lastmod>2026-09-05</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://www.mtnizolasyon.com/images/carousel/slide-066.webp</image:loc>
+      <image:title>Havuzda yalıtım üzerine seramik uygulaması — MTN İzolasyon</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.mtnizolasyon.com/projeler/hyundai-enerji-istasyonu-kocaeli/</loc>
+    <lastmod>2026-09-05</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://www.mtnizolasyon.com/images/carousel/slide-095.webp</image:loc>
+      <image:title>Temel ve perde duvarda tamamlanmış su yalıtımı — MTN İzolasyon</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.mtnizolasyon.com/hizmetler/</loc>
+    <lastmod>2026-09-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.mtnizolasyon.com/hizmetler/teras-cati-izolasyonu/</loc>
+    <lastmod>2026-09-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.mtnizolasyon.com/hizmetler/havuz-izolasyonu/</loc>
+    <lastmod>2026-09-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.mtnizolasyon.com/hizmetler/su-kacagi-enjeksiyon/</loc>
+    <lastmod>2026-09-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.mtnizolasyon.com/hizmetler/membran-uygulamasi/</loc>
+    <lastmod>2026-09-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.mtnizolasyon.com/hizmetler/negatif-yonlu-kristalize-yalitim/</loc>
+    <lastmod>2026-09-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.mtnizolasyon.com/hizmetler/bentonit-uygulamasi/</loc>
+    <lastmod>2026-09-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.mtnizolasyon.com/hakkimizda/</loc>
+    <lastmod>2026-09-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.mtnizolasyon.com/iletisim/</loc>
+    <lastmod>2026-09-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.mtnizolasyon.com/galeri/</loc>
+    <lastmod>2026-09-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.mtnizolasyon.com/izolasyon-fiyatlari/</loc>
+    <lastmod>2026-09-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
 </urlset>

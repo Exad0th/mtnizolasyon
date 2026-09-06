@@ -1,0 +1,98 @@
+# ============================================================
+#  MTN İzolasyon — Apache yapılandırması
+#
+#  Bu sunucuda GEÇERLİDİR. www.mtnizolasyon.com'da nginx ters vekil
+#  olarak önde duruyor (Server: nginx) ama istekleri Apache karşılıyor —
+#  404 sayfasının Apache'ye ait olması bunu kanıtlıyor. Dolayısıyla
+#  .htaccess okunur ve uygulanır.
+#
+#  NOT: Bazı nginx+Apache kurulumlarında statik dosyalar (görsel, css,
+#  font) doğrudan nginx tarafından servis edilir; o durumda aşağıdaki
+#  Header ve Cache-Control yönergeleri HTML'de çalışır ama statik
+#  dosyalarda çalışmayabilir. Yükledikten sonra _kurulum/yayin-kontrol.md
+#  içindeki testi çalıştırın.
+# ============================================================
+
+# ---------- Hata sayfası ----------
+ErrorDocument 404 /404.html
+
+# ---------- Dizin listelemeyi kapat ----------
+Options -Indexes
+
+# ---------- Kanonik URL ----------
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+
+  # 1) HTTPS zorla
+  RewriteCond %{HTTPS} !=on
+  RewriteCond %{HTTP:X-Forwarded-Proto} !https
+  RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R=301,L]
+
+  # 2) www'suz -> www'lu  (canonical etiketleri www ile yazıldı)
+  RewriteCond %{HTTP_HOST} ^mtnizolasyon\.com$ [NC]
+  RewriteRule ^(.*)$ https://www.mtnizolasyon.com/$1 [R=301,L]
+
+  # 3) /index.html -> /   (aynı sayfanın iki adresi olmasın)
+  RewriteCond %{THE_REQUEST} \s/(.*/)?index\.html[\s?] [NC]
+  RewriteRule ^(.*/)?index\.html$ /%1 [R=301,L]
+
+  # 4) Sondaki eğik çizgi: /hizmetler -> /hizmetler/
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_URI} !(.+)/$
+  RewriteCond %{REQUEST_URI} !\.[a-zA-Z0-9]{2,5}$
+  RewriteRule ^(.*)$ /$1/ [R=301,L]
+</IfModule>
+
+# ---------- Güvenlik başlıkları ----------
+<IfModule mod_headers.c>
+  Header always set X-Content-Type-Options "nosniff"
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+  Header always set X-Frame-Options "SAMEORIGIN"
+  Header always set Permissions-Policy "geolocation=(), microphone=(), camera=(), payment=(), usb=()"
+  Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains" env=HTTPS
+
+  # İçerik Güvenliği: Google Fonts ve Google Maps embed'i için izin verilmiştir.
+  Header always set Content-Security-Policy "default-src 'self'; base-uri 'self'; object-src 'none'; img-src 'self' data: https://*.googleapis.com https://*.gstatic.com; style-src 'self' 'unsafe-inline'; font-src 'self'; script-src 'self' 'unsafe-inline'; frame-src https://www.google.com https://maps.google.com; frame-ancestors 'self'; form-action 'self'"
+</IfModule>
+
+# ---------- Sıkıştırma ----------
+<IfModule mod_brotli.c>
+  AddOutputFilterByType BROTLI_COMPRESS text/html text/css text/plain text/xml application/javascript application/json image/svg+xml
+</IfModule>
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/css text/plain text/xml application/javascript application/json image/svg+xml
+</IfModule>
+
+# ---------- Önbellek ----------
+<IfModule mod_expires.c>
+  ExpiresActive On
+  # Görseller ve ikonlar: uzun ömürlü (dosya adı değişmeden içerik değişmiyor)
+  ExpiresByType image/webp                "access plus 1 year"
+  ExpiresByType image/jpeg                "access plus 1 year"
+  ExpiresByType image/png                 "access plus 1 year"
+  ExpiresByType image/x-icon              "access plus 1 year"
+  # HTML: kısa — içerik güncellenince hemen görünsün
+  ExpiresByType text/html                 "access plus 0 seconds"
+  ExpiresByType application/xml           "access plus 1 hour"
+  ExpiresByType application/manifest+json "access plus 1 week"
+</IfModule>
+<IfModule mod_headers.c>
+  <FilesMatch "\.(webp|jpe?g|png|ico|woff2?)$">
+    Header set Cache-Control "public, max-age=31536000, immutable"
+  </FilesMatch>
+  <FilesMatch "\.html$">
+    Header set Cache-Control "public, max-age=0, must-revalidate"
+  </FilesMatch>
+</IfModule>
+
+# ---------- Doğru MIME türleri ----------
+<IfModule mod_mime.c>
+  AddType image/webp .webp
+  AddType application/manifest+json .webmanifest
+</IfModule>
+
+# ---------- Yayına ait olmayan dosyaları kapat ----------
+<FilesMatch "\.(bak|zip|md|py)$">
+  Require all denied
+</FilesMatch>
+RedirectMatch 404 ^/(_kurulum|_kaldirilan-gorseller|images-original)/

@@ -1,3 +1,6 @@
-MTN İzolasyon.html
-.claude
-*.mjs
+images-original/
+_kurulum/
+_kaldirilan-gorseller/
+*.bak
+*.zip
+.htaccess
