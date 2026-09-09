@@ -1,10 +1,12 @@
 # ---------- Yerel yedekler (repoya girmez) ----------
 # optimizasyon öncesi ham fotoğraflar (~34 MB)
 images-original/
-# Google İşletme Profili / Search Console kurulum notları
-_kurulum/
 # siteden kaldırılan, telifi bize ait olmayan görseller
 _kaldirilan-gorseller/
+
+# ---------- _kurulum: betikler ve notlar girer, günlükler girmez ----------
+# FTP oturum dökümleri: makine adı ve bağlantı ayrıntısı içerir
+_kurulum/*log*.txt
 
 # ---------- Üretilen dosyalar ----------
 mtn-yayin.zip
