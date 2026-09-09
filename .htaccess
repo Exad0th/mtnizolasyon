@@ -40,10 +40,14 @@ Options -Indexes
   RewriteRule ^(.*/)?index\.html$ /%1 [R=301,L]
 
   # 4) Sondaki eğik çizgi: /hizmetler -> /hizmetler/
-  RewriteCond %{REQUEST_FILENAME} !-f
-  RewriteCond %{REQUEST_URI} !(.+)/$
-  RewriteCond %{REQUEST_URI} !\.[a-zA-Z0-9]{2,5}$
-  RewriteRule ^(.*)$ /$1/ [R=301,L]
+  #    DİKKAT: desen ^(.+)$ olmalı, ^(.*)$ DEĞİL. .htaccess dizin bağlamında
+  #    kök istek "/" boş dizgeye eşlenir; ^(.*)$ boş dizgeyi de yakalar ve
+  #    "/" -> "//" -> "//" sonsuz döngüsü oluşur (ERR_TOO_MANY_REDIRECTS).
+  #    Ayrıca yalnızca gerçekten var olan dizinlere çizgi eklenir; olmayan
+  #    adresler gereksiz bir 301 yemeden doğrudan 404'e gider.
+  RewriteCond %{REQUEST_FILENAME} -d
+  RewriteCond %{REQUEST_URI} !/$
+  RewriteRule ^(.+)$ /$1/ [R=301,L]
 </IfModule>
 
 # ---------- Güvenlik başlıkları ----------
@@ -92,10 +96,15 @@ Options -Indexes
 <IfModule mod_mime.c>
   AddType image/webp .webp
   AddType application/manifest+json .webmanifest
+  # Sunucu woff2'yi application/octet-stream olarak veriyordu; canli testte
+  # goruldu ve duzeltildi. Yanlis tur bazi tarayicilarda on yukleme uyarisi
+  # uretir ve sikistirma pas gecilebilir.
+  AddType font/woff2 .woff2
+  AddType font/woff  .woff
 </IfModule>
 
 # ---------- Yayına ait olmayan dosyaları kapat ----------
 <FilesMatch "\.(bak|zip|md|py)$">
   Require all denied
 </FilesMatch>
-RedirectMatch 404 ^/(_kurulum|_kaldirilan-gorseller|images-original)/
+RedirectMatch 404 ^/(_kurulum|_hafiza|_kaldirilan-gorseller|images-original)/
