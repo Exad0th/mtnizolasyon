@@ -11,6 +11,9 @@
 #  Header ve Cache-Control yönergeleri HTML'de çalışır ama statik
 #  dosyalarda çalışmayabilir. Yükledikten sonra _kurulum/yayin-kontrol.md
 #  içindeki testi çalıştırın.
+#
+#  Panel: DirectAdmin (cPanel değil). Gerçek yol:
+#  /home/<kullanıcı>/domains/mtnizolasyon.com/public_html
 # ============================================================
 
 # ---------- Hata sayfası ----------
