@@ -2,7 +2,7 @@
 
 ## Teyitli proje verileri
 
-Üçü de müşteriden birebir alındı.
+Üçü de müşteriden birebir alındı. Lonicera 14 Eylül akşamı Mövenpick ile değiştirildi; aşağıdaki Lonicera tablosu yalnızca geçmiş kayıttır.
 
 ### Alanya Oba Stadyumu
 | | |
@@ -14,9 +14,12 @@
 | Garanti | 5 yıl |
 | Müteahhit | Mekikler İnşaat |
 | İsim kullanımı | serbest |
-| Fotoğraf | yok |
+| Fotoğraf | müşteriden, `images/projeler/alanya-oba-stadyumu.webp` |
 
 ### Lonicera Otel, havuz izolasyonu
+
+**Geçersiz (14 Eylül akşam):** proje Mövenpick Tekirova ile değiştirildi, sayfa kaldırıldı, eski adres 301 ile yönleniyor.
+
 | | |
 |---|---|
 | Tarih | Şubat 2021 |
@@ -36,7 +39,7 @@
 | Süre | 7 gün |
 | Garanti | 5 yıl |
 | İsim kullanımı | serbest |
-| Fotoğraf | yok |
+| Fotoğraf | müşteriden, `images/projeler/hyundai-enerji-istasyonu-kocaeli.webp` |
 
 ### Bir kez düzeltildi
 
@@ -128,11 +131,24 @@ Müşterinin sözü: *"Membran uygulaması ve temel su yalıtımı rulo membran 
 - PVC yalnızca havuz karşılaştırmalarında *"PVC havuz örtüsü (liner)"* seçeneği olarak geçer. Bu doğru, dokunulmadı.
 - Oba Stadyumu (ODE PP300) ve Hyundai (Onduline PP300) zaten bitümlü membran projeleri, metinleri bununla uyumlu.
 
-## Proje değişikliği: Lonicera yerine Mövenpick (bekliyor)
+## Proje değişikliği: Lonicera yerine Mövenpick (sayfa yayında, künye kısmen dolu)
+
+**Müşteriden gelen veriler (14 Eylül akşam):**
+
+| | |
+|---|---|
+| Tarih | 2023, ay belirtilmedi |
+| Süre | 2 ay |
+| Garanti | 5 yıl |
+| Malzeme | Sika tekstil membran; tam ürün adı belirtilmedi |
+| Alan | **bekleniyor** |
+| İşveren ve isim izni | **bekleniyor** |
+
+Fotoğraftaki sarı, kırmızı Sika logolu paneller SikaProof ailesine benziyor. Bu bir tahmin; ürün adı teyit edilmeden sitede kullanılmaz ve yöntem bölümü yazılmaz.
 
 Müşteri Lonicera (3.000 m²) yerine **Mövenpick, Tekirova** otelini referans göstermek istiyor: daha büyük bir otel ve daha büyük bir iş. Referans fotoğrafı `_gelen/2026-09-14/WhatsApp Image 2026-09-14 at 15.47.06.jpeg`: havuz kabuğunda sarı panel membran, çevrede inşaat hâlindeki binalar. Fotoğrafta uzakta küçük bir kişi var, yüzü seçilmiyor.
 
-**Veri gelmeden sayfa yazılmayacak.** Lonicera sayfasının malzemeyle çelişen anlatısı bir kez düzeltilmişti; aynı hata tekrarlanmasın. Gerekenler:
+**14 Eylül akşamı kullanıcı kararıyla sayfa boş künyeyle yayına alındı.** Yöntem ve karşılaştırma bölümleri ürün adı gelmeden yazılmayacak; Lonicera sayfasının malzemeyle çelişen anlatısı bir kez düzeltilmişti. Künyeyi doldurmak için gerekenler:
 
 | Alan | Neden |
 |---|---|
@@ -144,15 +160,17 @@ Müşteri Lonicera (3.000 m²) yerine **Mövenpick, Tekirova** otelini referans 
 | Otel adını kullanma izni | Mövenpick bir zincir markası; diğer üç projede izin açıkça alınmıştı |
 | Havuz mu, başka bir yüzey mi | fotoğraf havuza benziyor, teyit gerekli |
 
-Sayfa yazılınca yapılacaklar: yeni adres, eski Lonicera adresinden 301 yönlendirme, sitemap, proje merkez sayfası, ana sayfa kartı, havuz hizmet sayfası, Oba ve Hyundai sayfalarındaki "diğer projeler" kartları, hakkımızda tablosu, Google İşletme Profili notu.
+**Yapıldı:** yeni adres, eski Lonicera adresinden 301, sitemap, proje merkez sayfası, ana sayfa kartı, havuz hizmet sayfası, Oba ve Hyundai sayfalarındaki kartlar, hakkımızda tablosu, Google İşletme Profili notu.
+
+**Veri gelince yapılacaklar:** künyedeki `müşteriden bekleniyor` işaretli hücreler, hakkımızda tablosundaki boş hücreler, JSON-LD `CreativeWork` içine `dateCreated`, `size`, `material` ve işveren izni varsa `sponsor`, proje merkez sayfası kartındaki künye satırı, ana sayfa kartı başlığına alan, yöntem bölümü.
 
 ## 14 Eylül'de gelen görseller
 
 | Dosya (saat) | İçerik | Karar |
 |---|---|---|
-| 15.43.55 | Oba Stadyumu drone çekimi, 1920×1080 | **Bekletildi.** Kimin çektiği belli değil |
-| 15.46.44 | Hyundai fabrikası hava fotoğrafı, 580×780 | **Bekletildi.** Web boyutunda kurumsal görsel, proje ölçeğini de abartıyor |
-| 15.47.06 | Mövenpick havuzu, sarı membran | Mövenpick sayfası için saklandı |
+| 15.43.55 | Oba Stadyumu drone çekimi, 1920×1080 | Kullanıcı kararıyla Oba sayfasında ve kartlarda |
+| 15.46.44 | Hyundai fabrikası hava fotoğrafı, 580×780 | Kullanıcı kararıyla Hyundai sayfasında ve kartlarda; kullanıcıya göre müşterinin kendi çekimi |
+| 15.47.06 | Mövenpick havuzu, sarı membran | Mövenpick sayfasında ve kartlarda |
 | 15.50.48 | Beyaz likit yalıtımlı teras | Teras sayfasında |
 | 15.51.35 | Asansör kuyusunda enjeksiyon | Enjeksiyon sayfasında; ustanın yüzü görünmüyor |
 | 15.52.46 | Temel tabanında bitümlü membran | Membran sayfasında; uzaktaki iki işçi ve kamyonet seçilmiyor |
@@ -161,3 +179,5 @@ Sayfa yazılınca yapılacaklar: yeni adres, eski Lonicera adresinden 301 yönle
 WhatsApp dosyalarında EXIF verisi yok, kaynak üstveriden okunamıyor. Karar görüntü içeriğine ve boyut oranlarına göre verildi. 4:5 ve 1,91:1 oranları Instagram kırpımına işaret ediyor, muhtemelen firmanın kendi hesabından alınmışlar.
 
 **Kristalize sayfası:** mevcut görsel yanlıştı, kaldırıldı. Yenisi gelmedi.
+
+**Hyundai kartları (14 Eylül):** ana sayfa, proje merkez sayfası ve diğer iki proje sayfasındaki Hyundai kartında konut temeli fotoğrafı (`slide-095`) vardı. Arkasındaki apartmanlar Kocaeli'deki bir enerji istasyonuyla çelişiyordu. Kullanıcının onayıyla yerine proje sayfasının kendi üst görseli olan bitümlü membran bindirme yakın çekimi (`slide-058`) kondu; konum iddia etmiyor, malzemeyle uyumlu. `slide-095` galeride ve hakkımızda karuselinde kalıyor. Aynı akşam kullanıcı kararıyla Hyundai kartlarına müşterinin kendi fotoğrafı kondu.

@@ -154,7 +154,7 @@ profiller Google tarafından daha aktif kabul edilir.
 1. **Doğrulama kartını bekleyin** — Google adrese posta kartı gönderir, üzerindeki kodu girin.
 2. **İlk yorumları isteyin.** Yerel sıralamada yorum sayısı ve tazeliği doğrudan etkilidir.
    Memnun müşterilere doğrudan yorum linki gönderin (profil panelinden alınır).
-   Üç referans işvereniniz — Mekikler İnşaat, Lonicera Hotel, Aslan Holding — adlarının
+   Referans işverenlerinizden Mekikler İnşaat ve Aslan Holding adlarının
    kullanılmasına zaten izin verdi; yorum istemek için doğal bir başlangıç noktası.
 3. **Soru-Cevap bölümünü kendiniz doldurun.** Google buna izin veriyor ve boş bırakılırsa
    rakipler veya alakasız kişiler doldurabiliyor. Sitedeki SSS'lerden başlayın:

@@ -29,7 +29,7 @@ hizmetler/
 projeler/
   index.html                                Proje hub'ı
   alanya-oba-stadyumu/
-  lonicera-otel-havuz-izolasyonu/
+  movenpick-tekirova-otel-havuz-izolasyonu/
   hyundai-enerji-istasyonu-kocaeli/
 images/                                     WebP görseller (hero, carousel, projects)
 robots.txt  sitemap.xml  site.webmanifest

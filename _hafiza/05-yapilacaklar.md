@@ -10,18 +10,21 @@ Son güncelleme: 14 Eylül 2026.
 
 ## 2. Müşteriye sorulacaklar
 
-1. **Oba Stadyumu drone fotoğrafını kim çekti?** Firmanın kendi çekimiyse sayfaya konur, değilse konmaz.
-2. **Hyundai fabrika fotoğrafını kim çekti?** Kendi çekimi olsa bile tüm fabrikayı gösterdiği için "Hyundai fabrikasının yalıtımını yaptık" izlenimi verir. Proje sahasının kendi fotoğrafı tercih edilmeli.
-3. **Mövenpick Tekirova verileri:** tarih, m², malzeme ve ürün adı, süre, garanti, otel adını kullanma izni, havuz olup olmadığı. Veri gelince Lonicera sayfası Mövenpick ile değiştirilecek, eski adresten 301 verilecek.
-4. **Kristalize yalıtım için doğru fotoğraf.**
-5. **Tanıtım videosunda "BİTÜMLÜ MEMBRAN UYGULAMA" başlığı** "UYGULAMASI" olmalı. Yazı videoya gömülü; düzeltilmiş çıktı gelirse aynı kesimle (41,1–50,4 sn çıkarılır) yeniden üretilir ve dosya adı değiştirilir.
-6. **Çalışma saatleri.** Pazartesi-Cumartesi 08:30-18:30 diye JSON-LD'ye işlendi, teyitsiz. Yanlışsa Google firma kapalıyken açık gösterir.
-7. **Teras uygulaması 2-5 gün** (ana sayfa SSS). Değişirse JSON-LD `FAQPage` cevabı da birebir değişmeli.
-8. **350+ proje, 15+ yıl tecrübe, yurt dışında hizmet.** Kaynağı yok.
+1. **Mövenpick künyesi:** alan (m²), işveren ve otel adını kullanma izni hâlâ eksik. Tarih 2023, süre 2 ay, garanti 5 yıl ve malzeme Sika tekstil membran işlendi. Tam ürün adı gelirse yöntem bölümü yazılır; ay bilgisi gelirse künye ve JSON-LD `dateCreated` netleşir.
+2. **Kristalize yalıtım için doğru fotoğraf.**
+3. **Tanıtım videosunda "BİTÜMLÜ MEMBRAN UYGULAMA" başlığı** "UYGULAMASI" olmalı. Yazı videoya gömülü; düzeltilmiş çıktı gelirse aynı kesimle (41,1–50,4 sn çıkarılır) yeniden üretilir ve dosya adı değiştirilir.
+4. **Çalışma saatleri.** Pazartesi-Cumartesi 08:30-18:30 diye JSON-LD'ye işlendi, teyitsiz. Yanlışsa Google firma kapalıyken açık gösterir.
+5. **Teras uygulaması 2-5 gün** (ana sayfa SSS). Değişirse JSON-LD `FAQPage` cevabı da birebir değişmeli.
+6. **350+ proje, 15+ yıl tecrübe, yurt dışında hizmet.** Kaynağı yok.
 
 ## 3. Müşterinin kendi yapması gerekenler
 
-**Google İşletme Profili.** Hazır metinler `_kurulum/google-isletme-profili.md` içinde. Lonicera geçiyorsa Mövenpick verisi gelince güncellenmeli.
+**Google İşletme Profili.** Profil zaten var: Haritalar'da "MTN izolasyon", 4,7 puan, 18 yorum, kategori "İnşaat Şirketi". Adres, telefon ve web sitesi siteyle aynı. Saatler, fotoğraflar girilmiş ve "sahibi siz misiniz" satırı yok, yani bir hesap tarafından yönetiliyor. Müşterinin 14 Eylül'de verdiği Gmail hesabı profili yönetmiyor: business.google.com/locations sayfasında 0 işletme görünüyor.
+
+- Yönetici hesap müşteriye sorulacak: telefonundaki Google hesabı, eski web tasarımcısı veya ajans, profil e-postalarının geldiği adres.
+- Bulunamazsa business.google.com/add üzerinden işletme aranıp erişim isteği gönderilecek. Bu akış mevcut sahibin e-posta adresinin bir kısmını gösterir. **Yeni profil açılmayacak**, çift kayıt sıralamaya zarar verir.
+- Erişim gelince: birincil kategori "Su yalıtımı servisi", ad "MTN İzolasyon", web sitesi https://www.mtnizolasyon.com, yeni proje ve hizmet fotoğrafları. Hazır metinler `_kurulum/google-isletme-profili.md` içinde.
+- Haritada açılış saati 07:30, sitenin JSON-LD'si 08:30 diyor. Haftalık saatler haritadan alınıp site profile uydurulacak.
 
 **Google Search Console.** Adımlar `_kurulum/search-console-kurulum.md` içinde. `sitemap.xml` gönderilmeli.
 
@@ -37,6 +40,6 @@ Son güncelleme: 14 Eylül 2026.
 
 - **Kaynağı belli olmayan görsel yayınlamak.** Google Görseller'den alınmaz; müşteriden gelen görselin de kimin çektiği belli olmalı.
 - **İncelenmemiş fotoğraf yayınlamak.** Yüz, plaka, rakip tabelası ve siyasi pankart kontrol edilir.
-- **Veri gelmeden proje sayfası yazmak.** Malzeme bilinmeden yazılan anlatı bir kez gerçek malzemeyle çelişti.
+- **Ürün adı gelmeden yöntem bölümü yazmak.** Malzeme bilinmeden yazılan anlatı bir kez gerçek malzemeyle çelişti.
 - **"Rulo membran" demek.** Müşterinin terimi bitümlü membran.
 - **Teyitsiz bilgiyi JSON-LD'ye yazmak.**

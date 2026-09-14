@@ -39,6 +39,9 @@ Options -Indexes
   RewriteCond %{THE_REQUEST} \s/(.*/)?index\.html[\s?] [NC]
   RewriteRule ^(.*/)?index\.html$ /%1 [R=301,L]
 
+  # 3b) Proje değişikliği (14 Eylül 2026): Lonicera referansı Mövenpick Tekirova ile değiştirildi
+  RewriteRule ^projeler/lonicera-otel-havuz-izolasyonu/?$ /projeler/movenpick-tekirova-otel-havuz-izolasyonu/ [R=301,L]
+
   # 4) Sondaki eğik çizgi: /hizmetler -> /hizmetler/
   #    DİKKAT: desen ^(.+)$ olmalı, ^(.*)$ DEĞİL. .htaccess dizin bağlamında
   #    kök istek "/" boş dizgeye eşlenir; ^(.*)$ boş dizgeyi de yakalar ve

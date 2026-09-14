@@ -1,5 +1,15 @@
 # Durum
 
+## 14 Eylül 2026 akşam — kullanıcı kararları
+
+Kullanıcı aşağıdaki üç kararı "tartışma, direkt yap" diyerek verdi. Aynı günün "Müşteriden beklenenler" listesindeki ilk üç maddenin yerini alır. Bu kararlar yeniden tartışmaya açılmamalı.
+
+- **Oba Stadyumu.** Müşterinin gönderdiği drone fotoğrafı proje sayfasında, tüm kartlarda, paylaşım görselinde ve site haritasında kullanılıyor. Dosyalar `images/projeler/alanya-oba-stadyumu*.webp`.
+- **Hyundai.** Kullanıcıya göre fotoğrafı müşteri kendisi çekti. Proje sayfasında, tüm kartlarda, paylaşım görselinde ve site haritasında kullanılıyor. Görsel 580×780 ve düşük çözünürlüklü; proje sayfasında 780 piksel genişliğe sınırlandı ki fazla büyütülmesin.
+- **Mövenpick.** Lonicera sayfası kaldırıldı, yerine `/projeler/movenpick-tekirova-otel-havuz-izolasyonu/` geldi. Eski adres `.htaccess` ile 301 yönleniyor. Künyede tarih, alan, süre, garanti ve işveren "—" olarak boş, HTML içinde `müşteriden bekleniyor` yorumuyla işaretli. Sika Topseal'e özgü yöntem ve karşılaştırma bölümleri kaldırıldı; ürün adı gelince yöntem bölümü yazılacak. Harita, koordinat bulunamadığı için adres aramasıyla gömüldü. Aynı akşam müşteriden tarih (2023), süre (2 ay), garanti (5 yıl) ve malzeme (Sika tekstil membran) geldi ve künyeye, JSON-LD'ye, hakkımızda tablosuna ve kartlara işlendi. Alan ve işveren hâlâ boş.
+
+FTP betiği sunucudan dosya silmediği için eski Lonicera sayfası sunucuda duruyor, ama 301 kuralı ona hiç ulaşılmasına izin vermiyor.
+
 ## 14 Eylül 2026 — müşteri geri bildirimi
 
 **Durum:** yerelde uygulandı, doğrulandı ve `seo-revizyonu` dalına push edildi. **Sunucuya henüz yüklenmedi.**

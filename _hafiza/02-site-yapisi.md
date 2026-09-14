@@ -11,10 +11,10 @@ hizmetler/index.html           + 6 hizmet sayfası
   teras-cati-izolasyonu/  havuz-izolasyonu/  su-kacagi-enjeksiyon/
   membran-uygulamasi/  negatif-yonlu-kristalize-yalitim/  bentonit-uygulamasi/
 projeler/index.html            + 3 proje sayfası
-  alanya-oba-stadyumu/  lonicera-otel-havuz-izolasyonu/
+  alanya-oba-stadyumu/  movenpick-tekirova-otel-havuz-izolasyonu/
   hyundai-enerji-istasyonu-kocaeli/
 galeri/  hakkimizda/  iletisim/  izolasyon-fiyatlari/
-fonts/ (15 dosya)   images/ (217 dosya, ~15 MB)
+fonts/ (15 dosya)   images/ (227 dosya, ~14,8 MB)
 robots.txt  sitemap.xml (16 URL)  site.webmanifest  favicon.ico
 apple-touch-icon.png  .htaccess  vercel.json  README.md
 ```
@@ -149,3 +149,7 @@ JavaScript kapalıyken oynat düğmesi gizli kalır ve `<noscript>` içindeki de
 ## Test ortamı notu (ek)
 
 Tarayıcı bölmesi gizliyken Chrome videoyu güç tasarrufu gerekçesiyle durdurur (`AbortError ... paused to save power`) ve `img.decode()` hiç sonuçlanmaz. Bunlar site hatası değil. Yerel `python -m http.server` WebP dosyalarını `application/octet-stream` türüyle verir; canlı sunucu doğru türü veriyor.
+
+## Proje görselleri (14 Eylül 2026 akşam)
+
+`images/projeler/<slug>.webp` ve küçük sürümü. Oba Stadyumu 1600×900 ve 800×450, Hyundai 580×780 ve 480 genişlik, Mövenpick 1200×1500 ve 480 genişlik. Paylaşım görselleri `images/og/<slug>.jpg`. Proje kartları ana sayfada, Oba ve Mövenpick sayfalarında CSS arka planı, proje merkez sayfasında ve Hyundai sayfasında `<img>` olarak çiziliyor; görsel değişince hepsi birlikte güncellenmeli.
