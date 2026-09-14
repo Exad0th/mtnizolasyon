@@ -1,60 +1,42 @@
 # Yapılacaklar
 
-## 1. Hemen, kod tarafı
+Son güncelleme: 14 Eylül 2026.
 
-**Yazı tipi MIME türü.** `.htaccess` içine `AddType font/woff2 .woff2` eklendi
-ama sunucuya gitmedi. `_kurulum\HTACCESS-DUZELT.bat` çalıştırılacak, sonra:
+## 1. Hemen
 
-```bash
-curl -s -o /dev/null -w "%{content_type}\n" https://www.mtnizolasyon.com/fonts/manrope-400-latin.woff2
-```
+**Tam yükleme.** 14 Eylül değişiklikleri ve 9 Eylül'deki woff2 düzeltmesi sunucuda değil. `_kurulum\FTP-YUKLE.bat` çalıştırılacak. Ek doğrulama komutları [04-yayin.md](04-yayin.md) içinde.
 
-`font/woff2` dönmeli.
-
-**FTP hesabını silin.** Yükleme bitti, hesap açık kalmasın. Bağlantı TLS'siz
-olduğu için şifre ağ üzerinde açık gitti.
+**FTP hesabını silin.** Yükleme bitince. Bağlantı TLS'siz, şifre ağ üzerinde açık gidiyor.
 
 ## 2. Müşteriye sorulacaklar
 
-Bunlar sitede yazıyor ama teyitsiz. En riskliden başlayarak:
-
-1. **Çalışma saatleri.** Pazartesi-Cumartesi 08:30-18:30 diye yazıldı ve
-   JSON-LD'ye işlendi. Yanlışsa Google firma kapalıyken açık gösterir.
-2. **Teras uygulaması 2-5 gün.** Ana sayfa SSS'inde. Değiştirilirse JSON-LD
-   `FAQPage` içindeki cevap da birebir güncellenmeli.
-3. **350+ proje, 15+ yıl tecrübe, yurt dışında hizmet.** Kaynağı yok.
-4. **Hangi Lonicera oteli.** Alanya'da dört tane var. Netleşirse proje
-   sayfasındaki uydu gömmesi Street View gömmesine çevrilir.
+1. **Oba Stadyumu drone fotoğrafını kim çekti?** Firmanın kendi çekimiyse sayfaya konur, değilse konmaz.
+2. **Hyundai fabrika fotoğrafını kim çekti?** Kendi çekimi olsa bile tüm fabrikayı gösterdiği için "Hyundai fabrikasının yalıtımını yaptık" izlenimi verir. Proje sahasının kendi fotoğrafı tercih edilmeli.
+3. **Mövenpick Tekirova verileri:** tarih, m², malzeme ve ürün adı, süre, garanti, otel adını kullanma izni, havuz olup olmadığı. Veri gelince Lonicera sayfası Mövenpick ile değiştirilecek, eski adresten 301 verilecek.
+4. **Kristalize yalıtım için doğru fotoğraf.**
+5. **Tanıtım videosunda "BİTÜMLÜ MEMBRAN UYGULAMA" başlığı** "UYGULAMASI" olmalı. Yazı videoya gömülü; düzeltilmiş çıktı gelirse aynı kesimle (41,1–50,4 sn çıkarılır) yeniden üretilir ve dosya adı değiştirilir.
+6. **Çalışma saatleri.** Pazartesi-Cumartesi 08:30-18:30 diye JSON-LD'ye işlendi, teyitsiz. Yanlışsa Google firma kapalıyken açık gösterir.
+7. **Teras uygulaması 2-5 gün** (ana sayfa SSS). Değişirse JSON-LD `FAQPage` cevabı da birebir değişmeli.
+8. **350+ proje, 15+ yıl tecrübe, yurt dışında hizmet.** Kaynağı yok.
 
 ## 3. Müşterinin kendi yapması gerekenler
 
-**Google İşletme Profili.** Hazır metinler `_kurulum/google-isletme-profili.md`
-içinde: 690 karakterlik firma açıklaması, kategori önerileri, hizmet listesi,
-yüklenecek fotoğraf seçkisi.
+**Google İşletme Profili.** Hazır metinler `_kurulum/google-isletme-profili.md` içinde. Lonicera geçiyorsa Mövenpick verisi gelince güncellenmeli.
 
-**Google Search Console.** Adımlar `_kurulum/search-console-kurulum.md` içinde.
-Site artık canlı olduğu için doğrulama yapılabilir. `sitemap.xml` gönderilmeli.
+**Google Search Console.** Adımlar `_kurulum/search-console-kurulum.md` içinde. `sitemap.xml` gönderilmeli.
 
-**Müşteri yorumları toplamak.** Yerel aramada en çok işe yarayan ve en çok
-ihmal edilen adım.
+**Müşteri yorumları toplamak.** Yerel aramada en çok işe yarayan ve en çok ihmal edilen adım.
 
-## 4. Sonraki oturumda yapılabilecekler
+## 4. Sonraki oturumlarda yapılabilecekler
 
-**Canlı site denetimi.** Bugün yönlendirmeler, sayfa erişimi, başlıklar,
-önbellek ve MIME türleri ölçüldü. Henüz yapılmayanlar: gerçek tarayıcıda
-görsel kontrol, Core Web Vitals ölçümü, Zengin Sonuç Testi ile JSON-LD
-doğrulaması, mobil görünüm.
-
-**Sunucudaki eski dosyaların temizliği.** Eski sitenin `images` klasörü
-duruyor. Hangi dosyaların artık kullanılmadığı listelenip silinebilir.
-
-**Dalı `main` ile birleştirmek.** Şu an `seo-revizyonu` dalında çalışıyoruz.
-`main` hâlâ eski tek sayfalık siteyi taşıyor. Müşteri onayından sonra
-birleştirilebilir.
+- Yükleme sonrası canlı site denetimi: hero videosu gerçek telefonda, Core Web Vitals, Zengin Sonuç Testi.
+- Sunucudaki eski dosyaların temizliği: eski sitenin `images` klasörü ve artık kullanılmayan `images/hero/hero-*.webp`.
+- `seo-revizyonu` dalını müşteri onayından sonra `main` ile birleştirmek.
 
 ## Yapılmayacaklar
 
-- **Google Görseller'den görsel almak.** Konuşuldu, reddedildi.
-- **İncelenmemiş fotoğraf yayınlamak.** Altı fotoğraf gizlilik ve kalite
-  gerekçesiyle elendi, aynı titizlik sürmeli.
-- **Teyitsiz bilgiyi JSON-LD'ye yazmak.** Zaten yazılmış olanlar yukarıda.
+- **Kaynağı belli olmayan görsel yayınlamak.** Google Görseller'den alınmaz; müşteriden gelen görselin de kimin çektiği belli olmalı.
+- **İncelenmemiş fotoğraf yayınlamak.** Yüz, plaka, rakip tabelası ve siyasi pankart kontrol edilir.
+- **Veri gelmeden proje sayfası yazmak.** Malzeme bilinmeden yazılan anlatı bir kez gerçek malzemeyle çelişti.
+- **"Rulo membran" demek.** Müşterinin terimi bitümlü membran.
+- **Teyitsiz bilgiyi JSON-LD'ye yazmak.**

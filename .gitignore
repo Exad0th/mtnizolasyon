@@ -3,6 +3,8 @@
 images-original/
 # siteden kaldırılan, telifi bize ait olmayan görseller
 _kaldirilan-gorseller/
+# müşteriden gelen ham dosyalar: telif durumu teyit edilmemiş görseller içerebilir
+_gelen/
 
 # ---------- _kurulum: betikler ve notlar girer, günlükler girmez ----------
 # FTP oturum dökümleri: makine adı ve bağlantı ayrıntısı içerir

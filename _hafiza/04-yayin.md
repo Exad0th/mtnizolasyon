@@ -144,3 +144,25 @@ Eski tek sayfalık sitenin `images` klasörü sunucuda duruyor, silinmedi. Yeni
 dosyalar üzerine yazıldı ama artık hiçbir sayfanın kullanmadığı eski görseller
 orada kalmaya devam ediyor. Zarar vermiyor, yalnızca yer kaplıyor. Temizlik
 istenirse hangi dosyaların fazlalık olduğu listelenebilir.
+
+## `_gelen/` klasörü (14 Eylül 2026)
+
+Müşteriden gelen ham dosyalar proje köküne bırakılırsa **FTP betiği onları da sunucuya yükler** ve herkese açık bir adreste dururlar. Depo da herkese açık olduğu için `git add` ile GitHub'a da gidebilirler. Bu yüzden:
+
+- Ham dosyalar `_gelen/<tarih>/` altına konur.
+- `_gelen` FTP betiğinin dışlama listesinde, `.gitignore` içinde ve `.htaccess` `RedirectMatch 404` kuralında.
+- Siteye girecek görsel önce işlenir (`images/...` altına WebP olarak), ham hâli `_gelen` içinde kalır.
+
+## Bir sonraki yükleme
+
+Tam yükleme gerekiyor, tek dosya betiği yetmez. Yeni klasörler: `video/`, `images/hizmetler/`, `images/og/`. Değişen dosyalar: ana sayfa, beş hizmet sayfası, hizmetler merkez sayfası, hakkımızda, Oba ve Hyundai proje sayfaları, `.htaccess`.
+
+Yükledikten sonra ek doğrulama:
+
+```bash
+curl -s -o /dev/null -w "%{http_code} %{content_type}\n" https://www.mtnizolasyon.com/video/mtn-tanitim.mp4
+curl -sI -H "Range: bytes=0-99" https://www.mtnizolasyon.com/video/mtn-tanitim.mp4 | head -1
+curl -s -o /dev/null -w "%{http_code}\n" https://www.mtnizolasyon.com/_gelen/
+```
+
+Sırasıyla beklenen: `200 video/mp4`, `HTTP/1.1 206 Partial Content` (iOS Safari videoyu parça parça ister), `404`.

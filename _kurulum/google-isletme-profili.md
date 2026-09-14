@@ -74,7 +74,7 @@ Türkiye'nin her iline ekip gönderiyoruz.
 Profil içinde "Hizmetler" bölümüne tek tek eklenecek. Her birinin adı ve açıklaması:
 
 **1 — Teras ve Çatı İzolasyonu**
-> Teras, çatı, balkon ve ıslak hacimlerde likit veya rulo membranla uygulanan kesintisiz su yalıtımı.
+> Teras, çatı, balkon ve ıslak hacimlerde likit veya bitümlü membranla uygulanan kesintisiz su yalıtımı.
 
 **2 — Havuz Su Yalıtımı**
 > Otel ve villa havuzlarında kabuk içine uygulanan, seramik altı çimento esaslı sürme su yalıtım sistemleri.
@@ -83,7 +83,7 @@ Profil içinde "Hizmetler" bölümüne tek tek eklenecek. Her birinin adı ve a�
 > Yapısal çatlaklardan gelen su sızıntısını yapıyı sökmeden durduran poliüretan ve epoksi esaslı basınçlı reçine enjeksiyonu.
 
 **4 — Membran Uygulaması**
-> Teras, çatı, temel ve zeminlerde polyester taşıyıcılı bitüm, PVC veya TPO esaslı esnek rulo su yalıtım katmanları.
+> Teras, çatı, temel ve zeminlerde polyester taşıyıcılı bitümlü membranla oluşturulan esnek su yalıtım katmanları.
 
 **5 — Negatif Yönlü Kristalize Yalıtım**
 > Kazı yapılamayan bodrum ve perde duvarlarda, betonun kılcal boşluklarında kristal oluşturarak içeriden uygulanan su yalıtımı.

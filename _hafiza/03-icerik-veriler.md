@@ -32,7 +32,7 @@
 |---|---|
 | Tarih | Haziran 2013 |
 | Alan | 2.500 m² |
-| Malzeme | Onduline PP300, rulo membran |
+| Malzeme | Onduline PP300, polyester taşıyıcılı bitümlü membran |
 | Süre | 7 gün |
 | Garanti | 5 yıl |
 | İsim kullanımı | serbest |
@@ -42,8 +42,8 @@
 
 Lonicera sayfası önce tekstil membran anlatıyordu ve karşılaştırma bölümünde
 çimento esaslı sistemleri açıkça eliyordu; gerçek malzeme çimento esaslıydı.
-Hyundai sayfası epoksi zemin kaplaması anlatıyor ve rulo membranları eliyordu;
-gerçek malzeme rulo membrandı. Her iki sayfanın yöntem ve karşılaştırma
+Hyundai sayfası epoksi zemin kaplaması anlatıyor ve bitümlü membranları eliyordu;
+gerçek malzeme bitümlü membrandı. Her iki sayfanın yöntem ve karşılaştırma
 bölümleri yeniden yazıldı.
 
 Yeni bir proje sayfası eklerken malzeme ile anlatının çeliştiğini mutlaka
@@ -59,8 +59,7 @@ eklendi. API anahtarı gerekmiyor.
 
 Hyundai için müşteri Türkler bölgesindeki yeri işaret etti, o konum kullanıldı.
 
-**Açık soru:** Alanya'da dört Lonicera oteli var, hangisi olduğu netleşmedi.
-Netleşirse uydu gömmesi Street View gömmesine çevrilebilir, tek satırlık iş.
+**Geçersiz (14 Eylül):** Lonicera'nın hangi otel olduğu sorusu artık önemli değil, proje Mövenpick ile değiştirilecek.
 
 ## Görsel telifi, kırmızı çizgi
 
@@ -118,3 +117,47 @@ Müşteriye sorulup ya doğrulanmalı ya çıkarılmalı.
 
 Denetimde ölçülen: 541 kelimeden 17.192 görünür kelimeye çıkıldı, 1 sayfadan
 17 sayfaya geçildi.
+
+## Terminoloji kuralı: bitümlü membran (14 Eylül 2026)
+
+Müşterinin sözü: *"Membran uygulaması ve temel su yalıtımı rulo membran değil bitüm membran."*
+
+- Sitede **"bitümlü membran"** ve **"bitümlü örtü"** kullanılır. Müşterinin kendi videosunda da "Bitümlü membran uygulama" yazıyor.
+- **"Rulo membran" ve "rulo örtü" kullanılmaz.** 14 Eylül itibarıyla sitede sıfır geçiş var.
+- Membran hizmetinin açıklaması **PVC veya TPO içermez.** Güncel metin: *"polyester taşıyıcılı bitümlü membranla oluşturulan esnek su yalıtım katmanları"*.
+- PVC yalnızca havuz karşılaştırmalarında *"PVC havuz örtüsü (liner)"* seçeneği olarak geçer. Bu doğru, dokunulmadı.
+- Oba Stadyumu (ODE PP300) ve Hyundai (Onduline PP300) zaten bitümlü membran projeleri, metinleri bununla uyumlu.
+
+## Proje değişikliği: Lonicera yerine Mövenpick (bekliyor)
+
+Müşteri Lonicera (3.000 m²) yerine **Mövenpick, Tekirova** otelini referans göstermek istiyor: daha büyük bir otel ve daha büyük bir iş. Referans fotoğrafı `_gelen/2026-09-14/WhatsApp Image 2026-09-14 at 15.47.06.jpeg`: havuz kabuğunda sarı panel membran, çevrede inşaat hâlindeki binalar. Fotoğrafta uzakta küçük bir kişi var, yüzü seçilmiyor.
+
+**Veri gelmeden sayfa yazılmayacak.** Lonicera sayfasının malzemeyle çelişen anlatısı bir kez düzeltilmişti; aynı hata tekrarlanmasın. Gerekenler:
+
+| Alan | Neden |
+|---|---|
+| Tarih (ay, yıl) | künye ve JSON-LD |
+| Alan (m²) | başlık ve künye |
+| Malzeme ve ürün adı | yöntem ve karşılaştırma bölümleri buna göre yazılır; müşteri "tekstil membran" dedi, ürün belli değil |
+| Uygulama süresi | künye |
+| Garanti | künye |
+| Otel adını kullanma izni | Mövenpick bir zincir markası; diğer üç projede izin açıkça alınmıştı |
+| Havuz mu, başka bir yüzey mi | fotoğraf havuza benziyor, teyit gerekli |
+
+Sayfa yazılınca yapılacaklar: yeni adres, eski Lonicera adresinden 301 yönlendirme, sitemap, proje merkez sayfası, ana sayfa kartı, havuz hizmet sayfası, Oba ve Hyundai sayfalarındaki "diğer projeler" kartları, hakkımızda tablosu, Google İşletme Profili notu.
+
+## 14 Eylül'de gelen görseller
+
+| Dosya (saat) | İçerik | Karar |
+|---|---|---|
+| 15.43.55 | Oba Stadyumu drone çekimi, 1920×1080 | **Bekletildi.** Kimin çektiği belli değil |
+| 15.46.44 | Hyundai fabrikası hava fotoğrafı, 580×780 | **Bekletildi.** Web boyutunda kurumsal görsel, proje ölçeğini de abartıyor |
+| 15.47.06 | Mövenpick havuzu, sarı membran | Mövenpick sayfası için saklandı |
+| 15.50.48 | Beyaz likit yalıtımlı teras | Teras sayfasında |
+| 15.51.35 | Asansör kuyusunda enjeksiyon | Enjeksiyon sayfasında; ustanın yüzü görünmüyor |
+| 15.52.46 | Temel tabanında bitümlü membran | Membran sayfasında; uzaktaki iki işçi ve kamyonet seçilmiyor |
+| 15.54.05 | Temel altı bentonit örtü, 837×438 | Bentonit sayfasında; çözünürlüğü düşük, masaüstünde hafif yumuşak görünür |
+
+WhatsApp dosyalarında EXIF verisi yok, kaynak üstveriden okunamıyor. Karar görüntü içeriğine ve boyut oranlarına göre verildi. 4:5 ve 1,91:1 oranları Instagram kırpımına işaret ediyor, muhtemelen firmanın kendi hesabından alınmışlar.
+
+**Kristalize sayfası:** mevcut görsel yanlıştı, kaldırıldı. Yenisi gelmedi.

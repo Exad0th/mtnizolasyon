@@ -1,12 +1,39 @@
-# Durum — 9 Eylül 2026
+# Durum
 
-## Tek cümleyle
+## 14 Eylül 2026 — müşteri geri bildirimi
+
+**Durum:** yerelde uygulandı, doğrulandı ve `seo-revizyonu` dalına push edildi. **Sunucuya henüz yüklenmedi.**
+
+### Uygulananlar
+
+- **Hizmet görselleri.** Teras (beyaz likit yalıtım), enjeksiyon (asansör kuyusu), membran (temel tabanında bitümlü membran) ve bentonit (temel altı bentonit örtü) sayfalarına müşterinin gönderdiği fotoğraflar kondu. Dosyalar `images/hizmetler/`, 1200×630 paylaşım görselleri `images/og/` altında. Bu dört sayfanın `og:image` değeri artık sayfaya özel.
+- **Kristalize sayfası.** Yanlış görsel ve preload bağlantısı kaldırıldı. Müşteri doğru görseli sonra gönderecek.
+- **Terminoloji.** Müşteri "rulo membran değil bitüm membran" dedi. Sitede "rulo membran" ve "rulo örtü" kalmadı, membran hizmeti açıklamasından PVC/TPO çıkarıldı. Kural [03-icerik-veriler.md](03-icerik-veriler.md) içinde.
+- **Ana sayfa.** Beş görselli hero kaydırıcısının yerine müşterinin tanıtım videosu kondu. Ayrıntı [02-site-yapisi.md](02-site-yapisi.md) içinde.
+- **Ham müşteri dosyaları** `_gelen/2026-09-14/` altına alındı. Sunucuya da depoya da gitmez.
+
+### Müşteriden beklenenler
+
+1. **Stadyum fotoğrafını kim çekti?** Profesyonel drone çekimi. Müşteri daha önce stadyumun fotoğrafı olmadığını söylemişti ve o sırada kullanılan görsel internetten çıkmıştı. Tribünde siyasi görünümlü, yüzlü bir pankart da var. **Yayınlanmadı.**
+2. **Hyundai fotoğrafını kim çekti?** 580×780 web boyutunda, Hyundai'nin kurumsal hava fotoğrafına benziyor. Bütün otomobil fabrikasını ve büyük logoları gösteriyor, oysa proje 2.500 m²'lik enerji istasyonu zemini. **Yayınlanmadı.**
+3. **Mövenpick (Tekirova) verileri.** Lonicera'nın yerine geçecek ama hiçbir veri gelmedi. Lonicera sayfası veri gelene kadar yayında kalıyor. Gereken alanlar [03-icerik-veriler.md](03-icerik-veriler.md) içinde.
+4. **Kristalize için doğru görsel.**
+
+### Yükleme notu
+
+9 Eylül'de hazırlanan woff2 MIME düzeltmesi **hâlâ sunucuya gitmedi**; 14 Eylül'de canlıda `application/octet-stream` ölçüldü. Tek bir tam yükleme (`_kurulum\FTP-YUKLE.bat`) hepsini kapsar: yeni `video/`, `images/hizmetler/`, `images/og/` klasörleri, değişen HTML dosyaları ve `.htaccess`.
+
+---
+
+## 9 Eylül 2026 — ilk yayın
+
+### Tek cümleyle
 
 Site **canlıda ve çalışıyor**. 16 sayfanın tamamı, yardımcı dosyalar ve
 yönlendirmeler ölçülerek doğrulandı. Kod tarafında planlanan işler bitti.
 Kalanlar Google hesapları ve müşteri onayı gibi kod dışı işler.
 
-## Bugün ne oldu
+### Bugün ne oldu
 
 1. 255 dosya FTP ile sunucuya yüklendi. Hata yok, 2 dakika 4 saniye.
 2. Site açıldığında `ERR_TOO_MANY_REDIRECTS` verdi. Sebebi `.htaccess`
@@ -15,7 +42,7 @@ Kalanlar Google hesapları ve müşteri onayı gibi kod dışı işler.
 4. Canlı ölçüm yapıldı, bir eksik daha bulundu: yazı tipleri yanlış MIME
    türüyle servis ediliyordu. **Düzeltmesi depoda ama sunucuya henüz gitmedi.**
 
-## Yönlendirme döngüsü — ne olduğu ve neden
+### Yönlendirme döngüsü — ne olduğu ve neden
 
 `.htaccess` içindeki sondaki eğik çizgi kuralı şöyleydi:
 
@@ -48,7 +75,7 @@ yemeden doğrudan 404 sayfasına gider.
 **Ders:** `.htaccess` içinde `^(.*)$` deseniyle yol başına ekleme yapan hiçbir
 kural yazmayın. Kök istek her zaman boş dizgedir.
 
-## Canlıda ölçülen sonuçlar
+### Canlıda ölçülen sonuçlar
 
 Yönlendirmeler:
 
@@ -82,7 +109,7 @@ Başlıklar ve önbellek:
 Bunlar `.htaccess`'in gerçekten okunduğunu kanıtlıyor. nginx yalnızca önde
 duran ters vekil, istekleri Apache karşılıyor.
 
-## Sunucuya gitmeyi bekleyen tek değişiklik
+### Sunucuya gitmeyi bekleyen tek değişiklik
 
 `.htaccess` içine `AddType font/woff2 .woff2` eklendi. Yüklemek için:
 
@@ -99,7 +126,7 @@ curl -s -o /dev/null -w "%{content_type}
 
 `font/woff2` dönmeli.
 
-## Tarayıcı önbelleği tuzağı
+### Tarayıcı önbelleği tuzağı
 
 Döngü sırasında tarayıcılar `301` yanıtını **kalıcı** olarak önbelleğe aldı.
 Sunucu düzeldikten sonra bile aynı pencerede döngü devam edebilir. Test her

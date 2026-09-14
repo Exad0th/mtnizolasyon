@@ -28,3 +28,4 @@ kaldığımız yerden devam edebilmek için var. Yeni bir oturuma başlarken
    Hâlâ yazılı duran birkaç tanesi 03 numaralı dosyada listeli.
 4. **Şifreler bu depoya ve sohbete yazılmaz.** Yükleme betikleri şifreyi
    çalışma anında sorar, hiçbir yere kaydetmez.
+5. **Müşteriden gelen ham dosyalar `_gelen/<tarih>/` klasörüne konur.** Kök dizine bırakılan dosya FTP betiğiyle sunucuya, `git add` ile herkese açık depoya gider.

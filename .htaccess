@@ -78,13 +78,14 @@ Options -Indexes
   ExpiresByType image/jpeg                "access plus 1 year"
   ExpiresByType image/png                 "access plus 1 year"
   ExpiresByType image/x-icon              "access plus 1 year"
+  ExpiresByType video/mp4                 "access plus 1 year"
   # HTML: kısa — içerik güncellenince hemen görünsün
   ExpiresByType text/html                 "access plus 0 seconds"
   ExpiresByType application/xml           "access plus 1 hour"
   ExpiresByType application/manifest+json "access plus 1 week"
 </IfModule>
 <IfModule mod_headers.c>
-  <FilesMatch "\.(webp|jpe?g|png|ico|woff2?)$">
+  <FilesMatch "\.(webp|jpe?g|png|ico|woff2?|mp4)$">
     Header set Cache-Control "public, max-age=31536000, immutable"
   </FilesMatch>
   <FilesMatch "\.html$">
@@ -101,10 +102,11 @@ Options -Indexes
   # uretir ve sikistirma pas gecilebilir.
   AddType font/woff2 .woff2
   AddType font/woff  .woff
+  AddType video/mp4 .mp4
 </IfModule>
 
 # ---------- Yayına ait olmayan dosyaları kapat ----------
 <FilesMatch "\.(bak|zip|md|py)$">
   Require all denied
 </FilesMatch>
-RedirectMatch 404 ^/(_kurulum|_hafiza|_kaldirilan-gorseller|images-original)/
+RedirectMatch 404 ^/(_kurulum|_hafiza|_gelen|_kaldirilan-gorseller|images-original)/

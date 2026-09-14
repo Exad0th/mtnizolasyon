@@ -94,7 +94,7 @@ dönerseniz CSP'yi de açmanız gerekir.
 |---|---|
 | Biçim | WebP, Pillow ile dönüştürüldü |
 | Duyarlı | `srcset` ve `sizes`, 480 piksellik küçük sürümler mevcut |
-| Ana sayfa karuseli | 94 fotoğraf |
+| Ana sayfa hakkımızda karuseli | 94 fotoğraf |
 | Galeri | 94 fotoğraf |
 | Ham arşiv | `images-original/`, 34 MB, depoya girmez |
 
@@ -112,3 +112,40 @@ kare birleştirme yok (ekran görüntüleri boş çıkar), zamanlayıcılar kıs
 `document.hasFocus()` false döner ve bu yüzden `:focus` hiç eşleşmez, CSS
 geçişleri ilerlemez, çapraz kaynaklı çerçeveler görüntülenmez.
 Odak stillerini sınıf ekleyerek test edin.
+
+## Ana sayfa hero videosu (14 Eylül 2026)
+
+| | |
+|---|---|
+| Dosya | `video/mtn-tanitim.mp4` |
+| Biçim | 576×1024 dikey, H.264 High, 30 fps, ses izi yok, faststart |
+| Süre / boyut | 47,5 sn / 3,5 MB (CRF 31; 27 ile 31 arasında gözle fark yok, kaynak zaten WhatsApp sıkıştırmalı) |
+| Poster | `images/hero/video-poster.webp` (1,5. saniyedeki kare) |
+| Arka plan | `images/hero/video-bg.webp` (90×160 bulanık kare) |
+
+**Kaynak ve kesim.** Müşterinin yapay zekâ ile düzenlediği 57,3 saniyelik saha videosu. Müşteri 41–50 arasının çıkmasını istedi; bu aralık "Isı yalıtımı" bölümü. Geçiş kareleri ölçülerek kesim 41,1 ve 50,4 saniyeye oturtuldu, iki parça 0,5 saniyelik geçişle bağlandı. Ham dosya `_gelen/2026-09-14/` altında.
+
+**Yerleşim.** 900 pikselin üstünde metin solda, dikey video sağda çerçeve içinde. Altında alt alta dizilir: önce başlık, sonra video. Videonun üzerine yazı bindirilmedi, çünkü videonun kendi alt yazıları ve bitiş kartı var.
+
+**Davranış.**
+- `src` ancak video ekrana girince atanır, sayfa açılışı videoyu beklemez.
+- Sessiz, döngülü, satır içi oynar. Ekrandan çıkınca durur, dönünce devam eder.
+- Sayfa arka plan sekmesinde açılırsa Chrome oynatmayı keser; sekmeye dönülünce `visibilitychange` ile devam eder.
+- Sağ üstte oynat/duraklat düğmesi var (WCAG 2.2.2). Kullanıcı durdurduysa kaydırma onu yeniden başlatmaz.
+- Hareket azaltma veya veri tasarrufu tercihinde kendiliğinden başlamaz, düğmeyle başlatılabilir.
+
+**Önbellek kuralı.** `.htaccess` mp4 dosyalarını bir yıl `immutable` olarak önbelleğe aldırıyor. Video değişirse **dosya adı da değişmeli** (örneğin `mtn-tanitim-2.mp4`), yoksa ziyaretçiler bir yıl boyunca eskisini görür. Aynı kural görseller için de geçerli.
+
+Eski `images/hero/hero-*.webp` dosyaları `_kaldirilan-gorseller/hero/` klasörüne taşındı, artık yüklenmiyor. FTP betiği sunucudan dosya silmediği için eski kopyalar sunucuda duruyor; zararsızlar, istenirse elle silinir.
+
+JavaScript kapalıyken oynat düğmesi gizli kalır ve `<noscript>` içindeki denetimli video gösterilir. Yazdırmada video gizlenir, hero metin yüksekliğine iner ve beyaz yazı siyaha döner.
+
+**Bilinen kusur:** videoya gömülü başlıklardan biri "BİTÜMLÜ MEMBRAN UYGULAMA" yazıyor, iyelik eki eksik (doğrusu "UYGULAMASI"). Yazı müşterinin videosuna gömülü, düzeltilmiş çıktı müşteriden istenmeli.
+
+## Hizmet sayfası görselleri (14 Eylül 2026)
+
+`images/hizmetler/<slug>.webp` ve `<slug>-480.webp`. Figür 400 piksel yüksekliğinde `object-fit:cover` bir bant olarak çizilir, her sayfada `object-position` konuya göre ayarlı. Başlıktaki preload bağlantısı `imagesrcset` ve `imagesizes` kullanır, böylece telefon büyük görseli ayrıca indirmez.
+
+## Test ortamı notu (ek)
+
+Tarayıcı bölmesi gizliyken Chrome videoyu güç tasarrufu gerekçesiyle durdurur (`AbortError ... paused to save power`) ve `img.decode()` hiç sonuçlanmaz. Bunlar site hatası değil. Yerel `python -m http.server` WebP dosyalarını `application/octet-stream` türüyle verir; canlı sunucu doğru türü veriyor.
