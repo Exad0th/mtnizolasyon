@@ -17,6 +17,11 @@ Son güncelleme: 14 Eylül 2026.
 5. **Teras uygulaması 2-5 gün** (ana sayfa SSS). Değişirse JSON-LD `FAQPage` cevabı da birebir değişmeli.
 6. **350+ proje, 15+ yıl tecrübe, yurt dışında hizmet.** Kaynağı yok.
 
+**Anahtar kelime çalışmasından doğan sorular (15 Eylül):**
+- **Ses yalıtımı:** kendi ekibinizle duvar, tavan veya döşemede ses yalıtımı uyguluyor musunuz, yoksa yalnızca ürün mü satıyorsunuz? mtnyapi.com sizin firmanız mı? Evetse Alanya'da yapılmış bir işin fotoğrafı ve malzeme adı gerekiyor. Cevap gelene kadar "alanya ses yalıtımı" için içerik yazılmayacak.
+- **Isı yalıtımı:** su yalıtımından ayrı bir hizmet olarak yapılıyor mu? Videodan bu bölüm çıkarıldığı için sorulmalı.
+- **İstatistik kutuları:** ana sayfadaki 350+ proje, 15+ yıl ve "yurt dışı hizmet" kutuları ile SSS'deki "yurt dışında da hizmet" cümlesinin dayanağı var mı?
+
 ## 3. Müşterinin kendi yapması gerekenler
 
 **Google İşletme Profili.** Profil zaten var: Haritalar'da "MTN izolasyon", 4,7 puan, 18 yorum, kategori "İnşaat Şirketi". Adres, telefon ve web sitesi siteyle aynı. Saatler, fotoğraflar girilmiş ve "sahibi siz misiniz" satırı yok, yani bir hesap tarafından yönetiliyor. Müşterinin 14 Eylül'de verdiği Gmail hesabı profili yönetmiyor: business.google.com/locations sayfasında 0 işletme görünüyor.

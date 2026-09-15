@@ -1,5 +1,24 @@
 # Durum
 
+## 15 Eylül 2026 (devam) — anahtar kelime haritası
+
+Kullanıcı şu kelimelere çalışılmasını istedi: alanya izolasyon, alanya yalıtım, alanya su yalıtımı, alanya su izolasyonu, alanya ses yalıtımı, alanya ses izolasyonu. Site kapsamı, üç rakip site ve ses yalıtımı kanıtları paralel incelendi; plan ayrı bir eleştiri ajanından geçti.
+
+| Kelime | Hedef sayfa |
+|---|---|
+| alanya izolasyon, alanya yalıtım | Ana sayfa |
+| alanya su yalıtımı, alanya su izolasyonu | /hizmetler/ |
+| teras, havuz, membran vb. + Alanya | İlgili hizmet sayfası |
+| alanya ses yalıtımı, alanya ses izolasyonu | **Engelli**: firmanın bu hizmeti verdiğine dair kanıt yok |
+
+Aynı kelime için iki sayfa hedeflenmiyor; eş anlamlı kelimeler için ayrı sayfa açılmıyor (doorway sayfası olur).
+
+**Yapılanlar:** hizmetler merkez sayfasının başlığı, H1'i, açıklaması ve girişi "Alanya su yalıtımı" odağına çekildi. Hakkımızda sayfası "Alanya İzolasyon Firması" başlığını bıraktı, ana sayfayla yarışmıyor. Ana sayfada hero paragrafı, hakkımızda bölümü H2'si ve paragrafı "Alanya + yalıtım" eşleşmesi alacak şekilde yazıldı, yeni bir SSS eklendi. Altı hizmet sayfası merkez sayfaya farklı bağlantı metinleriyle bağlandı. Büyük harfli etiketlerdeki noktasız I hataları düzeltildi.
+
+**Bilerek yapılmayanlar:** ana sayfa başlığı ve açıklaması 15 Eylül sabahı değiştiği için aynı gün tekrar değiştirilmedi. Rakiplerin her başlığa "Alanya İzolasyon - Alanya Yalıtım" eklemesi, anahtar kelime listeleri ve kelime varyasyonu haber sayfaları taklit edilmedi.
+
+**Rakip notu:** alanyaizolasyon.com.tr, izolanya.com ve alanyayalitim.com'un içerikleri bizden çok daha ince (190-590 kelime). Üstünlükleri birebir eşleşen alan adı, başlık ve muhtemelen alan adı yaşı ve bağlantılar.
+
 ## 15 Eylül 2026 — ana sayfa arama başlığı
 
 "alanya izolasyon" aramasında site normal sonuçlarda 4. sıradaydı. Önündeki üç sitenin başlığı birebir "Alanya İzolasyon" ile başlıyor, biri alanyaizolasyon.com.tr alan adında. Kullanıcı onayıyla ana sayfada:
