@@ -1,5 +1,16 @@
 # Durum
 
+## 15 Eylül 2026 — ana sayfa arama başlığı
+
+"alanya izolasyon" aramasında site normal sonuçlarda 4. sıradaydı. Önündeki üç sitenin başlığı birebir "Alanya İzolasyon" ile başlıyor, biri alanyaizolasyon.com.tr alan adında. Kullanıcı onayıyla ana sayfada:
+
+- Başlık: `Alanya İzolasyon ve Su Yalıtımı Firması | MTN İzolasyon` (title, og, twitter, JSON-LD WebPage)
+- Açıklama: `Alanya izolasyon ve su yalıtımı hizmetleri: teras, bitümlü membran, enjeksiyon ve havuz uygulamalarında garantili çözümler. Ücretsiz keşif için arayın.` (meta ve JSON-LD WebPage)
+- Ana başlık (H1): `Alanya'da izolasyon ve garantili su yalıtımı`
+- Teyitsiz "15+ yıl, 350+ proje" ifadeleri açıklama ve sosyal medya etiketlerinden çıkarıldı. Hero altındaki paragrafta ve LocalBusiness JSON-LD açıklamasında hâlâ duruyor; müşteri teyidi bekleniyor.
+
+Etki birkaç haftada görülür. Ölçüm Google Search Console'dan yapılmalı; sitede doğrulama kodu yok, kurulmamış görünüyor.
+
 ## 14 Eylül 2026 akşam — kullanıcı kararları
 
 Kullanıcı aşağıdaki üç kararı "tartışma, direkt yap" diyerek verdi. Aynı günün "Müşteriden beklenenler" listesindeki ilk üç maddenin yerini alır. Bu kararlar yeniden tartışmaya açılmamalı.
