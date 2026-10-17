@@ -1,70 +1,89 @@
-# Google İşletme Profili — Kurulum Bilgi Paketi
-### MTN İzolasyon · hazırlanma tarihi 5 Eylül 2026
+# Google İşletme Profili — Güncelleme Paketi
+### MTN İzolasyon · ilk hazırlık 5 Eylül 2026 · güncelleme 15 Eylül 2026
 
-Bu belgedeki alanlar doğrudan Google İşletme Profili formuna kopyalanabilir.
-Sitedeki `LocalBusiness` yapısal verisi bu bilgilerle **birebir eşleşecek** şekilde kuruldu —
-profil ile site arasında tutarsızlık olmaması Google için önemli bir güven sinyalidir.
+Profil zaten var: Google Haritalar'da "MTN izolasyon", 18 yorum, 4,7 puan. Profili yöneten
+hesap 15 Eylül'de bulundu. Bu belge, **mevcut profilde** neyin nasıl değişeceğini anlatır.
+Yeni profil açılmaz; çift kayıt yerel sıralamaya zarar verir.
+
+Sitedeki `LocalBusiness` yapısal verisi aşağıdaki bilgilerle **birebir eşleşecek** şekilde kuruldu.
+Profil ile site arasında tutarsızlık olmaması Google için önemli bir güven sinyalidir.
+
+---
+
+## 0. Önce erişim
+
+1. Profilin ayarlarında **Kişiler ve erişim** bölümünü açın ve müşterinin hesabının rolüne bakın.
+   **Sahip** her şeyi yapabilir; **Yönetici** düzenler ama sahipliği devredemez.
+2. Kendi Gmail adresinizi **Yönetici** olarak ekleyin. Sahiplik müşteride kalsın.
+   Böylece müşterinin şifresiyle ve telefonuna gelen doğrulama kodlarıyla uğraşmazsınız.
+3. Profilin **doğrulanmış** olduğunu kontrol edin. Doğrulanmamış profildeki düzenlemeler yayınlanmaz.
+4. Profil Yöneticisi listesinde ikinci bir MTN kaydı görünürse silmeyin, önce bana haber verin.
 
 ---
 
 ## 1. Temel bilgiler
 
-| Alan | Değer |
-|---|---|
-| **İşletme adı** | `MTN İzolasyon` |
-| **Telefon** | `+90 530 258 20 34` |
-| **Web sitesi** | `https://www.mtnizolasyon.com` |
-| **Adres** | `Şekerhane Mah. Ali İmam Sok. No: 18-A` |
-| **İlçe / İl** | `Alanya / Antalya` |
-| **Posta kodu** | `07400` |
-| **Ülke** | `Türkiye` |
-| **Koordinat** | `36.5504559, 32.001631` |
+| Alan | Değer | Profilde şu an |
+|---|---|---|
+| **İşletme adı** | `MTN İzolasyon` | "MTN izolasyon", büyük İ ile düzeltilmeli |
+| **Telefon** | `+90 530 258 20 34` | uyumlu |
+| **Web sitesi** | `https://www.mtnizolasyon.com/` | adresin tam hâli kontrol edilmeli |
+| **Adres** | `Şekerhane Mah. Ali İmam Sok. No: 18/C` | profilde "18-A" yazıyor, **18/C olarak düzeltilmeli** (firma kaşesiyle teyitli, 13 Ekim 2026) |
+| **İlçe / İl** | `Alanya / Antalya` | uyumlu |
+| **Posta kodu** | `07400` | uyumlu |
+| **Ülke** | `Türkiye` | uyumlu |
 
 > **NAP kuralı:** Bu ad–adres–telefon üçlüsü, girdiğiniz **her yerde harfi harfine aynı** olmalı.
 > "MTN İzolasyon Ltd." veya "0530 258 20 34" gibi varyasyonlar Google'ın işletmeyi
 > farklı kayıtlar sanmasına yol açar ve yerel sıralamayı zayıflatır.
 
+> **İşletme adına kelime eklemeyin.** "MTN İzolasyon Alanya" veya "MTN İzolasyon Su Yalıtımı"
+> gibi adlar Google'ın kurallarına aykırıdır ve profil askıya alınabilir.
+
 ---
 
 ## 2. Kategoriler
 
+Kategori adı serbest yazılmaz, Google'ın listesinden seçilir. Kutuya yazmaya başlayınca çıkan
+seçeneklerden birebir olanı seçin.
+
 **Birincil kategori (en önemli alan):**
 ```
-Su yalıtımı servisi
+İzolasyon İşleri Yüklenicisi
 ```
-Formda arattığınızda çıkan en yakın karşılık budur. Çıkmazsa `Yalıtım müteahhidi` seçin.
+Haritada rakiplerin kullandığı Türkçe ad budur ve insanların yazdığı "izolasyon" kelimesiyle
+birebir eşleşir. Şu an profildeki birincil kategori "İnşaat Şirketi".
 
-**İkincil kategoriler (en fazla 9 tane eklenebilir, ilgili olanları seçin):**
+**İkincil kategoriler (yalnızca gerçekten yaptığınız işe uyanları seçin):**
 ```
-Yalıtım müteahhidi
-Çatı ustası
-İnşaat firması
-Havuz bakım servisi
-Zemin kaplama müteahhidi
+Su yalıtımı servisi        (kutuya "su yalıtım" yazıp çıkan karşılığı seçin)
+İnşaat Şirketi             (mevcut birincil kategori, ikincile iner)
+Çatı ustası                (teras ve çatı izolasyonu için; listede yoksa atlayın)
 ```
 
-> Birincil kategori sıralamada ikincillerden **çok daha ağır** basar. Yanlış birincil
-> kategori seçimi en sık yapılan hatadır — "İnşaat firması" seçerseniz su yalıtımı
-> aramalarında görünmezsiniz.
+> Birincil kategori sıralamada ikincillerden **çok daha ağır** basar. Firmanın yapmadığı bir
+> işin kategorisini eklemek, alakasız aramalarda görünmenize ve profilin incelemeye
+> düşmesine yol açar.
 
 ---
 
 ## 3. İşletme açıklaması
 
-Google 750 karakter sınırı koyuyor. Aşağıdaki metin **738 karakter**, doğrudan yapıştırılabilir:
+Google 750 karakter sınırı koyuyor. Açıklamaya bağlantı, telefon, fiyat veya kampanya yazılmaz.
+Aşağıdaki metin doğrudan yapıştırılabilir:
 
 ```
-MTN İzolasyon, Alanya merkezli bir su yalıtımı ve izolasyon firmasıdır. Remzi Oğuz Metin
-liderliğinde, yapı yalıtım tekniği alanındaki saha tecrübesiyle teras ve çatı izolasyonu,
-havuz su yalıtımı, enjeksiyonla su kaçağı durdurma, membran uygulaması, negatif yönlü
-kristalize yalıtım ve bentonit uygulamaları yapıyoruz.
+MTN İzolasyon, Alanya merkezli bir su yalıtımı ve izolasyon firmasıdır. Firmanın kurucusu
+Yapı Yalıtım Teknikeri Remzi Oğuz Metin'dir. Teras ve çatı izolasyonu, havuz su yalıtımı,
+enjeksiyonla su kaçağı durdurma, bitümlü membran uygulaması, negatif yönlü kristalize
+yalıtım ve bentonit uygulamaları yapıyoruz.
 
 Her projeye yerinde ücretsiz keşifle başlıyor, nem ölçümü ve sızıntı tespiti yaparak
 sorunun kaynağını belirliyoruz. Kullanılacak malzemeyi ve gerekçesini uygulama öncesinde
-yazılı olarak paylaşıyor, iş bitiminde su tutma testi yapıyoruz.
+yazılı olarak paylaşıyor, teslimden önce su tutma testi yapıyoruz.
 
 Alanya ve Antalya genelinde yoğun olarak çalışıyor, kurumsal ve büyük ölçekli projelerde
-Türkiye'nin her iline ekip gönderiyoruz.
+Türkiye genelinde hizmet veriyoruz.
 ```
 
 ---
@@ -77,12 +96,12 @@ Profil içinde "Hizmetler" bölümüne tek tek eklenecek. Her birinin adı ve a�
 > Teras, çatı, balkon ve ıslak hacimlerde likit veya bitümlü membranla uygulanan kesintisiz su yalıtımı.
 
 **2 — Havuz Su Yalıtımı**
-> Otel ve villa havuzlarında kabuk içine uygulanan, seramik altı çimento esaslı sürme su yalıtım sistemleri.
+> Otel ve villa havuzlarında kabuk içine uygulanan su yalıtımı; çimento esaslı sürme sistemler ve tekstil membran uygulamaları.
 
 **3 — Enjeksiyon ile Su Kaçağı Durdurma**
 > Yapısal çatlaklardan gelen su sızıntısını yapıyı sökmeden durduran poliüretan ve epoksi esaslı basınçlı reçine enjeksiyonu.
 
-**4 — Membran Uygulaması**
+**4 — Bitümlü Membran Uygulaması**
 > Teras, çatı, temel ve zeminlerde polyester taşıyıcılı bitümlü membranla oluşturulan esnek su yalıtım katmanları.
 
 **5 — Negatif Yönlü Kristalize Yalıtım**
@@ -90,6 +109,9 @@ Profil içinde "Hizmetler" bölümüne tek tek eklenecek. Her birinin adı ve a�
 
 **6 — Bentonit Uygulaması**
 > Su ile temas ettiğinde şişerek geçirimsiz hâle gelen doğal bentonit kil esaslı temel altı ve perde duvar yalıtımı.
+
+> Ses yalıtımı ve ısı yalıtımı **eklenmedi**. Müşteri bu işleri ayrı hizmet olarak yaptığını
+> teyit ederse eklenir.
 
 ---
 
@@ -109,61 +131,60 @@ Muratpaşa, Antalya
 Mersin
 ```
 
-> Not: Google hizmet bölgesi sayısını sınırlar ve çok geniş alan seçmek sıralamayı
+> Google hizmet bölgesi sayısını sınırlar ve çok geniş alan seçmek sıralamayı
 > **zayıflatır**. Gerçekten gittiğiniz ilçeleri seçin; "Türkiye geneli" demeyin.
-> Türkiye geneli kapasitesi zaten sitede anlatılıyor.
 
 ---
 
 ## 6. Çalışma saatleri
 
-⚠️ **BU BİLGİ HÂLÂ TEYİT EDİLMEDİ.**
+⚠️ **Profil ile site çelişiyor.**
 
-Sitedeki yapısal veride şu an şu değer duruyor:
+| Kaynak | Açılış |
+|---|---|
+| Google Haritalar'daki profil (15 Eylül'de görüldü) | 07:30 |
+| Sitenin yapısal verisi (varsayımdı, teyit edilmedi) | Pazartesi – Cumartesi 08:30 – 18:30 |
 
-```
-Pazartesi – Cumartesi   08:30 – 18:30
-Pazar                   Kapalı
-```
-
-Bu bir **varsayımdır**. Gerçek saatleri bildirin; hem profile hem siteye aynı değeri gireceğiz.
-Yanlış saat, Google'da "Şu anda açık" gösterip müşteriyi kapıda bırakır — bu, hiç saat
-yazmamaktan daha zararlıdır.
+Profildeki saatleri büyük olasılıkla firma sahibi girdi. Profilin düzenleme ekranındaki haftalık
+saatlerin ekran görüntüsünü gönderin; **site profile uyarlanacak**. Saatler yanlışsa önce
+müşteriyle doğrusunu netleştirip profilde düzeltin. Bayram ve tatil günleri için "özel saatler"
+alanını kullanın.
 
 ---
 
 ## 7. Fotoğraflar
 
-Profilde fotoğraf, tıklanma oranını en çok etkileyen unsurlardan biri. Sitedeki
-`images/carousel/` klasöründe kendi çekimleriniz olan 100 fotoğraf var. Yüklenecekler:
+Profilde fotoğraf, tıklanma oranını en çok etkileyen unsurlardan biri. Google **JPG veya PNG**
+kabul ediyor; sitedeki WebP dosyaları doğrudan yüklenmez.
 
-| Google'daki alan | Öneri |
+| Google'daki alan | Dosya |
 |---|---|
 | **Logo** | `images/og-logo.png` (512×512, kare) |
-| **Kapak fotoğrafı** | `images/og-cover.jpg` (1200×630) |
-| **İşten fotoğraflar** | `slide-020`, `slide-037`, `slide-042`, `slide-058`, `slide-066`, `slide-070`, `slide-084`, `slide-085`, `slide-095` — bu dokuzu görsel olarak kontrol edildi, yayına uygun |
-| **Ekip fotoğrafı** | Varsa ekleyin; Google bu türü ayrıca değerlendiriyor |
+| **Kapak fotoğrafı** | `images/og/teras-cati-izolasyonu.jpg` (1200×630) |
+| **İşten fotoğraflar** | `images/og/` klasöründeki JPG'ler: membran, enjeksiyon, bentonit, Mövenpick, Oba Stadyumu, Hyundai |
+| **Daha büyük kaynaklar** | `_gelen/2026-09-14/` içindeki orijinal JPEG'ler ve `images-original/` |
+| **Ekip fotoğrafı** | Varsa ekleyin; yüzü görünen kişilerin iznini alın |
 
-En az 10 fotoğrafla başlayın, sonra ayda birkaç tane ekleyin. Düzenli fotoğraf ekleyen
-profiller Google tarafından daha aktif kabul edilir.
+En az 10 fotoğrafla başlayın, sonra ayda birkaç tane ekleyin. Başka firmaların veya
+internetten alınmış fotoğraflar yüklenmez.
 
 ---
 
-## 8. Profil açıldıktan sonra
+## 8. Profili güncellerken ve sonrasında
 
-1. **Doğrulama kartını bekleyin** — Google adrese posta kartı gönderir, üzerindeki kodu girin.
-2. **İlk yorumları isteyin.** Yerel sıralamada yorum sayısı ve tazeliği doğrudan etkilidir.
-   Memnun müşterilere doğrudan yorum linki gönderin (profil panelinden alınır).
-   Referans işverenlerinizden Mekikler İnşaat ve Aslan Holding adlarının
-   kullanılmasına zaten izin verdi; yorum istemek için doğal bir başlangıç noktası.
-3. **Soru-Cevap bölümünü kendiniz doldurun.** Google buna izin veriyor ve boş bırakılırsa
-   rakipler veya alakasız kişiler doldurabiliyor. Sitedeki SSS'lerden başlayın:
-   - İzolasyon uygulaması ne kadar sürer ve garantisi var mı?
-   - Yerinde keşif ücretli mi?
-   - Hangi bölgelerde hizmet veriyorsunuz?
-   - Binamda su sızıntısı var, hangi yöntemi önerirsiniz?
+1. **Değişiklikleri parça parça yapın.** Önce birincil kategoriyi değiştirin ve Google'ın
+   onaylamasını bekleyin. Sonra adı düzeltin, en son açıklama, hizmetler ve fotoğraflar.
+   Ad, kategori ve adres aynı anda değişirse Google profili yeniden doğrulamaya alabilir.
+2. **Mevcut yorumlara cevap verin.** 18 yorumun hepsine kısa ve kişisel cevap yazın.
+3. **Yeni yorum isteyin.** Profildeki "Yorum iste" bağlantısını memnun müşterilere gönderin.
+   Referans işverenlerinizden Mekikler İnşaat ve Aslan Holding adlarının kullanılmasına
+   zaten izin verdi; yorum istemek için doğal bir başlangıç noktası. Müşteriye hazır metin
+   yazdırmayın; satın alınan veya sahte yorumlar profilin kapatılmasına kadar gider.
 4. **Gönderi paylaşın.** Ayda 1-2 kısa gönderi (tamamlanan iş, mevsimsel hatırlatma)
    profili canlı tutar.
+5. **Performans verisini gönderin.** Profildeki "Performans" bölümü, insanların sizi hangi
+   aramalarla bulduğunu gösterir. Ekran görüntüsünü gönderin; sitedeki kelime çalışmasını
+   buna göre ayarlarız.
 
 ---
 
