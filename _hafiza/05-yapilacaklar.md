@@ -24,22 +24,28 @@ Son güncelleme: 14 Eylül 2026.
 
 ## 3. Müşterinin kendi yapması gerekenler
 
-**Google İşletme Profili.** Profil zaten var: Haritalar'da "MTN izolasyon", 4,7 puan, 18 yorum, kategori "İnşaat Şirketi". Adres, telefon ve web sitesi siteyle aynı. Saatler, fotoğraflar girilmiş ve "sahibi siz misiniz" satırı yok, yani bir hesap tarafından yönetiliyor. Müşterinin 14 Eylül'de verdiği Gmail hesabı profili yönetmiyor: business.google.com/locations sayfasında 0 işletme görünüyor.
+**Google İşletme Profili.** Profil zaten var: Haritalar'da "MTN izolasyon", 4,7 puan, 18 yorum, kategori "İnşaat Şirketi". Adres, telefon ve web sitesi siteyle aynı. Saatler, fotoğraflar girilmiş ve "sahibi siz misiniz" satırı yok, yani bir hesap tarafından yönetiliyor. 14 Eylül'de müşterinin verdiği ilk Gmail hesabı profili yönetmiyordu; **15 Eylül'de profili yöneten hesap bulundu.** Profilde yapılacak değişikliklerin sırası ve kopyalanacak metinler `_kurulum/google-isletme-profili.md` içinde.
 
-- Yönetici hesap müşteriye sorulacak: telefonundaki Google hesabı, eski web tasarımcısı veya ajans, profil e-postalarının geldiği adres.
-- Bulunamazsa business.google.com/add üzerinden işletme aranıp erişim isteği gönderilecek. Bu akış mevcut sahibin e-posta adresinin bir kısmını gösterir. **Yeni profil açılmayacak**, çift kayıt sıralamaya zarar verir.
-- Erişim gelince: birincil kategori "Su yalıtımı servisi", ad "MTN İzolasyon", web sitesi https://www.mtnizolasyon.com, yeni proje ve hizmet fotoğrafları. Hazır metinler `_kurulum/google-isletme-profili.md` içinde.
+- Profilde: birincil kategori "İzolasyon İşleri Yüklenicisi", ikincil "Su yalıtımı servisi", ad "MTN İzolasyon", web sitesi https://www.mtnizolasyon.com, yeni proje ve hizmet fotoğrafları. Hazır metinler `_kurulum/google-isletme-profili.md` içinde.
 - Haritada açılış saati 07:30, sitenin JSON-LD'si 08:30 diyor. Haftalık saatler haritadan alınıp site profile uydurulacak.
 
 **Google Search Console.** Adımlar `_kurulum/search-console-kurulum.md` içinde. `sitemap.xml` gönderilmeli.
 
 **Müşteri yorumları toplamak.** Yerel aramada en çok işe yarayan ve en çok ihmal edilen adım.
 
+**Otellere tanıtım e-postası (7 Ekim 2026).** Antalya ilindeki otellerin kendi sitelerinde yayımladıkları kurumsal adreslerden bir liste ve e-posta şablonu hazırlandı. Dosyalar `_pazarlama/` klasöründe; bu klasör `.gitignore`, FTP betiğinin hariç listesi ve `.htaccess` ile depodan ve sunucudan uzak tutuluyor. **Listeyi asla depoya veya `_hafiza/`'ya kopyalama: depo herkese açık.**
+- Gönderimden önce: MTN İzolasyon İYS'ye (iys.org.tr) kaydolmalı, otel adresleri "tacir" olarak girilmeli (Ticari İletişim Yönetmeliği m.6/6). Her e-postada ticaret unvanı + MERSİS, iletişim bilgisi, konuda "Tanıtım", "ÇIKAR" yanıtıyla listeden çıkma. Çıkma talebi 3 iş gününde uygulanır; kayıtlar 10 yıl saklanır.
+- Kişi adına kayıtlı adresler (ad.soyad@) KVKK nedeniyle listeye alınmadı (Kurul Kararı 2022/861).
+- Gönderim şirketin kendi alan adındaki bir posta kutusundan, günde 20–50, her otele ayrı e-posta. Sunucu ayarı: IMAP `lin1.nictr.com:993`, SMTP `lin1.nictr.com:465`, ikisi de SSL.
+- internettescil müşteri panelinde "Module license has expired" arızası var; e-posta işlemleri hizmet sayfasındaki "Giriş Yap → Hosting Paneli" (DirectAdmin) üzerinden yapılıyor.
+- Gönderim aracı `_pazarlama/gonderim/` içinde (`GONDER.bat`, kullanım `README.md`). Eksikler: şablondaki ticaret unvanı/MERSİS/imza, barındırma firmasından sunucu IP'sinin ters DNS (PTR) kaydı.
+
 ## 4. Sonraki oturumlarda yapılabilecekler
 
 - Yükleme sonrası canlı site denetimi: hero videosu gerçek telefonda, Core Web Vitals, Zengin Sonuç Testi.
 - Sunucudaki eski dosyaların temizliği: eski sitenin `images` klasörü ve artık kullanılmayan `images/hero/hero-*.webp`.
 - `seo-revizyonu` dalını müşteri onayından sonra `main` ile birleştirmek.
+- Otel e-posta listesi: web araması kotası dolduğu için e-postası bulunamayan ~450 büyük otel (A/B önceliği) kaldı. Betikler ve çalışma sırası `_pazarlama/betikler/README.md` içinde; yeni bir oturumda ajanlarla devam edilebilir.
 
 ## Yapılmayacaklar
 

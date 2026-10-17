@@ -5,6 +5,8 @@ images-original/
 _kaldirilan-gorseller/
 # müşteriden gelen ham dosyalar: telif durumu teyit edilmemiş görseller içerebilir
 _gelen/
+# müşterinin pazarlama verileri (otel iletişim listeleri): kişisel veri içerebilir, repoya ve sunucuya girmez
+_pazarlama/
 
 # ---------- _kurulum: betikler ve notlar girer, günlükler girmez ----------
 # FTP oturum dökümleri: makine adı ve bağlantı ayrıntısı içerir
