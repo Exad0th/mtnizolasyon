@@ -112,4 +112,4 @@ Options -Indexes
 <FilesMatch "\.(bak|zip|md|py)$">
   Require all denied
 </FilesMatch>
-RedirectMatch 404 ^/(_kurulum|_hafiza|_gelen|_pazarlama|_kaldirilan-gorseller|images-original)/
+RedirectMatch 404 ^/(_kurulum|_hafiza|_gelen|_pazarlama|_kaldirilan-gorseller|images-original|mtnizolasyon-instagram)/
