@@ -52,7 +52,7 @@ try {
     }
 
     # --- Yüklenmeyecekler ---
-    $HaricKlasor = @('images-original', '_kaldirilan-gorseller', '_kurulum', '_hafiza', '_gelen', '_pazarlama', '.git', '.claude', '__pycache__')
+    $HaricKlasor = @('images-original', '_kaldirilan-gorseller', '_kurulum', '_hafiza', '_gelen', '_pazarlama', 'mtnizolasyon-instagram', '.git', '.claude', '__pycache__')
     $HaricUzanti = @('.bak', '.zip', '.py', '.ps1', '.bat')
     $HaricDosya  = @('README.md', 'vercel.json', '.gitignore', '.vercelignore')
 
